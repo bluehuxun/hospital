@@ -1,6 +1,0 @@
-.hospital_in_nav image{
-  width:100%;
-}
-.hospital_in_nav .no_content{
-    width: 200rpx;
-}
