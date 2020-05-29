@@ -1,0 +1,32 @@
+page{
+  background: #F1F1F1;
+  font-size:32rpx;
+}
+.flex{
+  line-height:84rpx;
+  background: #fff;
+}
+.flex .info_left{
+  width:200rpx;
+  flex:none;
+  text-align: right;
+}
+.flex .info_right{
+  margin:0 0 0 30rpx;
+}
+.save{
+  width:calc(100% - 40rpx);
+  border-radius: 10rpx;
+  margin:80rpx 0 0 20rpx;
+  /*position: fixed;*/
+  bottom:10rpx;
+  background: #1ABB85;
+  color:#fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  line-height:80rpx;
+}
+.red{
+  color:#f00;
+}

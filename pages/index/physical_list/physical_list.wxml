@@ -1,0 +1,15 @@
+<view class="list">
+		<view class="hint">此报告仅作参考，以医院纸质报告为准！</view>
+		<view class="info">
+				<image src="../../../img/pgjg.png" class="img1" />
+				体检报告列表
+		</view>
+		<!-- 列表信息 -->
+		<view bindtap="tonav" class="item">
+			<view class="left">
+				<view class="top">2019年两癌体检</view>
+				<view class="bottom">2019-06-29</view>
+			</view>
+			<view class="right">></view>
+		</view>
+</view>

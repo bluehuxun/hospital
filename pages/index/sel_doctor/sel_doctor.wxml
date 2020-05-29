@@ -1,0 +1,138 @@
+<view class='doctor_type flex'>
+  <view class='{{doc_type == 0 ? "active" : ""}}' data-doc_type='0' bindtap='change_doctor_type'>全部</view>
+  <view class='{{doc_type == 1 ? "active" : ""}}' data-doc_type='1' bindtap='change_doctor_type'>普通</view>
+  <view class='{{doc_type == 2 ? "active" : ""}}' data-doc_type='2' bindtap='change_doctor_type'>专家</view>
+</view>
+<view class='doctors clearfix'>
+  <navigator url='../sel_num/sel_num'>
+    <view class='doctors_info_wrap pull-left'>
+      <view class='doctors_info'>
+        <view class='avatar_wrap'>
+          <image src='{{img_url}}avatar.png' class='doctor_avatar' mode='widthFix'></image>
+          <block style='display:none;'>
+            <view class='specialist'>专家</view>
+          </block>
+          <block>
+            <view class='general'>普通</view>
+          </block>
+        </view>
+        <view class='name'>沈金龙</view>
+        <view class='work'>副主任医师</view>
+        <view class='flex residue_num clearfix'>
+          <view class='time pull-left'>
+            <view>下</view>
+            <view>午</view>
+          </view>
+          <view class='residue pull-left'>
+            <view>剩26</view>
+          </view>      
+        </view>
+      </view>
+    </view>
+  </navigator>
+  <view class='doctors_info_wrap pull-left'>  
+    <view class='doctors_info pull-left'>
+      <view class='avatar_wrap'>
+        <image src='{{img_url}}avatar.png' class='doctor_avatar' mode='widthFix'></image>
+        <block>
+          <view class='specialist'>专家</view>
+        </block>
+      </view>
+      <view class='name'>沈金龙</view>
+      <view class='work'>副主任医师</view>
+      <view class='flex residue_num clearfix'>
+        <view class='time pull-left'>
+          <view>下</view>
+          <view>午</view>
+        </view>
+        <view class='residue pull-left'>
+          <view>剩26</view>
+        </view>      
+      </view>
+    </view>
+  </view> 
+  <view class='doctors_info_wrap pull-left'>     
+    <view class='doctors_info pull-left'>
+      <view class='avatar_wrap'>
+        <image src='{{img_url}}avatar.png' class='doctor_avatar' mode='widthFix'></image>
+        <block>
+          <view class='specialist'>专家</view>
+        </block>
+      </view>
+      <view class='name'>沈金龙</view>
+      <view class='work'>副主任医师</view>
+      <view class='flex residue_num clearfix'>
+        <view class='time pull-left'>
+          <view>下</view>
+          <view>午</view>
+        </view>
+        <view class='residue pull-left'>
+          <view>剩26</view>
+        </view>      
+      </view>
+    </view>
+  </view>   
+  <view class='doctors_info_wrap pull-left'>
+    <view class='doctors_info'>
+      <view class='avatar_wrap'>
+        <image src='{{img_url}}avatar.png' class='doctor_avatar' mode='widthFix'></image>
+        <block>
+          <view class='specialist'>专家</view>
+        </block>
+      </view>
+      <view class='name'>沈金龙</view>
+      <view class='work'>副主任医师</view>
+      <view class='flex residue_num clearfix'>
+        <view class='time pull-left'>
+          <view>下</view>
+          <view>午</view>
+        </view>
+        <view class='residue pull-left'>
+          <view>剩26</view>
+        </view>      
+      </view>
+    </view>
+  </view>
+  <view class='doctors_info_wrap pull-left'>  
+    <view class='doctors_info pull-left'>
+      <view class='avatar_wrap'>
+        <image src='{{img_url}}avatar.png' class='doctor_avatar' mode='widthFix'></image>
+        <block>
+          <view class='specialist'>专家</view>
+        </block>
+      </view>
+      <view class='name'>沈金龙</view>
+      <view class='work'>副主任医师</view>
+      <view class='flex residue_num clearfix'>
+        <view class='time pull-left'>
+          <view>下</view>
+          <view>午</view>
+        </view>
+        <view class='residue pull-left'>
+          <view>剩26</view>
+        </view>      
+      </view>
+    </view>
+  </view> 
+  <view class='doctors_info_wrap pull-left'>     
+    <view class='doctors_info pull-left'>
+      <view class='avatar_wrap'>
+        <image src='{{img_url}}avatar.png' class='doctor_avatar' mode='widthFix'></image>
+        <block>
+          <view class='specialist'>专家</view>
+        </block>
+      </view>
+      <view class='name'>沈金龙</view>
+      <view class='work'>副主任医师</view>
+      <view class='flex residue_num clearfix'>
+        <view class='time pull-left'>
+          <view>下</view>
+          <view>午</view>
+        </view>
+        <view class='residue pull-left'>
+          <view>剩26</view>
+        </view>      
+      </view>
+    </view>
+  </view>
+</view>

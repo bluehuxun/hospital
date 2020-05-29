@@ -1,0 +1,100 @@
+<view class="list">
+		<view class="hint">武原街道签约居民体检（2019年）</view>
+		<view class="title">
+				<image src="../../../img/pgjg.png" class="img1" />
+				基本信息
+		</view>
+		<!-- 基本信息 -->
+		<view class="item1">
+				<text class="text1">体检时间</text>
+				<span class="span1"></span>
+				<text class="text2">{{form.tjdate}}</text>
+		</view>
+		<view class="item1">
+				<text class="text1">姓名</text>
+				<span class="span1"></span>
+				<text class="text2">{{form.name}}</text>
+		</view>
+		<view class="item1">
+				<text class="text1">身份证号</text>
+				<span class="span1"></span>
+				<text class="text2">{{form.shenfz}}</text>
+		</view>
+		<view class="item1">
+				<text class="text1">联系电话</text>
+				<span class="span1"></span>
+				<text class="text2">{{form.tel}}</text>
+		</view>
+		<view class="item1">
+				<text class="text1">地址</text>
+				<span class="span1"></span>
+				<text class="text2">{{form.address}}</text>
+		</view>
+		<view class="title">
+				<image src="../../../img/bgxq.png" class="img1" />
+				报告详情
+		</view>
+		<!-- 报告详情 -->
+		<view class="item1">
+				<text class="text1">外阴</text>
+				<span class="span1"></span>
+				<text class="text2">{{form.wy}}</text>
+		</view>
+		<view class="item1">
+				<text class="text1">阴道</text>
+				<span class="span1"></span>
+				<text class="text2">{{form.yd}}</text>
+		</view>
+		<view class="item1">
+				<text class="text1">分泌物</text>
+				<span class="span1"></span>
+				<text class="text2">{{form.fmw}}</text>
+		</view>
+		<view class="item1">
+				<text class="text1">子宫颈</text>
+				<span class="span1"></span>
+				<text class="text2">{{form.zgj}}</text>
+		</view>
+		<view class="item1">
+				<text class="text1">分泌物检查</text>
+				<span class="span1"></span>
+				<text class="text2">{{form.fmwjc}}</text>
+		</view>
+		<view class="item1">
+				<text class="text1">临床诊断</text>
+				<span class="span1"></span>
+				<text class="text2">{{form.lczd}}</text>
+		</view>
+		<view class="item1">
+				<text class="text1">HPV检查</text>
+				<span class="span1"></span>
+				<text class="text2">{{form.hpvjc}}</text>
+		</view>
+		<view class="item1">
+				<text class="text1">妇科B超</text>
+				<span class="span1"></span>
+				<text class="text2">{{form.fkbc}}</text>
+		</view>
+		<view class="item1">
+				<text class="text1">左乳房</text>
+				<span class="span1"></span>
+				<text class="text2">{{form.zrf}}</text>
+		</view>
+		<view class="item1">
+				<text class="text1">右乳房</text>
+				<span class="span1"></span>
+				<text class="text2">{{form.yrf}}</text>
+		</view>
+		<view class="title">
+				<image src="../../../img/tj.png" class="img1" />
+				宫颈癌检查建议
+		</view>
+		<!-- 宫颈癌检查建议 -->
+		<text class="text1">{{form.jy}}</text>
+		<view class="title">
+				<image src="../../../img/tj.png" class="img1" />
+				乳腺检查建议
+		</view>
+		<!-- 乳腺检查建议 -->
+		<text class="text1">{{form.jy}}</text>
+</view>

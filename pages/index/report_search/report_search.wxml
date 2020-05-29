@@ -1,0 +1,20 @@
+<view class='report_search flex'>
+  <view class='report_search_item'>
+    <view bindtap="to_body_exam_report">
+    <!--<navigator url='../body_exam_report/body_exam_report' hover-class='none'>  -->
+      <view>
+        <image src='{{img_url}}body_exam_report.png' class='report_search_img' mode='widthFix'></image>
+      </view>
+      <view>体检报告</view>
+    </view>
+  </view>
+  <view class='report_search_item'>
+    <view bindtap="to_test_report">
+      <view>
+        <image src='{{img_url}}exam_report.png' class='report_search_img' mode='widthFix'></image>
+      </view>
+      <view>检验检查报告</view>
+    </view>
+  </view>
+  
+</view>

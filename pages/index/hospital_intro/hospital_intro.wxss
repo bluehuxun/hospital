@@ -1,0 +1,85 @@
+.intro_type{
+  width:100%;
+  line-height:80rpx;
+  text-align: center;
+  position: fixed;
+  top:0;
+  left:0;
+  background: #fff;
+}
+.intro_type view{
+  color:#3C3C3C;
+  border-bottom:1rpx solid #F0F0F0;  
+}
+.intro_type .active{
+  color:#1ABB85;
+  border-bottom:6rpx solid #1ABB85;
+}
+.article{
+  padding: 80rpx 0 0 0;
+}
+.intro{
+  padding: 30rpx 20rpx 20rpx 20rpx;
+}
+.intro .hospital_img{
+  width:100%;
+}
+.intro .hospital_name{
+  color:#282828;
+  padding: 10rpx 0;
+}
+.intro .address{
+  padding: 10rpx 0;
+  font-size:36rpx;
+  color:#292929;  
+  display: flex;
+  align-items: center;
+}
+.intro .intro_tag view{
+  background: #1ABB85;
+  color:#fff;
+  margin:0 30rpx 0 0;
+  border-radius: 10rpx;
+  padding: 10rpx;
+}
+.intro_info{
+  font-size:30rpx;
+  color:#292929;
+}
+.intro_info view{
+  text-indent: 2em;
+}
+.stations{
+  padding: 30rpx 20rpx 20rpx 20rpx;
+}
+.stations .station_wrap{
+  padding: 10rpx 0;
+}
+.stations view view{
+  line-height:50rpx;
+}
+.stations .station{
+  color:#292929;
+}
+.stations .station_detail{
+  color:#282828;
+}
+.contact{
+  padding: 30rpx 20rpx 20rpx 20rpx;
+}
+.contact .tel_wrap{
+  padding: 10rpx 0;
+}
+.contact .link_address{
+  color:#282828;
+}
+.contact .tel{
+  color:#292929;
+}
+.contact view view{
+  line-height:50rpx;
+}
+.hospital_addr{
+  width:24rpx;
+  margin:0 20rpx 0 10rpx;
+}

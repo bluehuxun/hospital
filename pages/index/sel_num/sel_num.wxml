@@ -1,0 +1,88 @@
+<view class='doctors clearfix'>
+  <view class='doctors_info_wrap'>
+    <view class='doctors_info clearfix'>
+      <view class='avatar_wrap pull-left'>
+        <image src='{{img_url}}avatar.png' class='doctor_avatar' mode='widthFix'></image>
+        <block style='display:none;'>
+          <view class='specialist'>专家</view>
+        </block>
+        <block>
+          <view class='general'>普通</view>
+        </block>
+      </view>
+      <view class='doctor_info pull-left'>
+        <view class='name'>沈金龙
+          <view class='collect_wrap pull-right'>
+            <block wx:if='{{collect}}'>
+              <image bindtap='change_collect' src='{{img_url}}collect.png' class='collect' mode='widthFix'></image>
+            </block>
+            <block wx:else>
+              <image bindtap='change_collect' src='{{img_url}}no_collect.png' class='collect' mode='widthFix'></image>
+            </block>
+          </view>
+        </view>
+        <view class='work'>(门)心血管内科 副主任医师</view>
+        <view class='brief_intro' bindtap='brief_intro'>
+          <view class='pull-left'>简介</view>
+          <block wx:if='{{brief_intro == "down"}}'>
+            <image src='{{img_url}}down.png' class='toggle_nav' mode='widthFix'></image>
+          </block>
+          <block wx:else>
+            <image src='{{img_url}}up.png' class='toggle_nav' mode='widthFix'></image>
+          </block>
+        </view>
+      </view>
+    </view>
+    <view class='doctor_intro' wx:if='{{brief_intro == "up"}}'>
+      暂无医生介绍
+    </view>
+  </view>
+</view>
+<view>
+  <view class='appoint_header'>
+    <text class='appoint'>预约挂号</text>
+    <text class='price'>20.00元</text>
+  </view>
+</view>
+<view class='appoints'>
+  <view class='appoints_line flex'>
+    <view class='appoints_item flex'>
+      <view class='pull-left'>
+        <view>07-28 星期六</view>
+        <view>14:40 - 14:45</view>        
+      </view>
+      <navigator url='../confirm_regist/confirm_regist' class='appoint_btn pull-left'>
+        预约
+      </navigator>
+    </view>
+    <view class='appoints_item flex'>
+      <view class='pull-left'>
+        <view>07-28 星期六</view>
+        <view>14:40 - 14:45</view>        
+      </view>
+      <navigator url='../confirm_regist/confirm_regist' class='appoint_btn pull-left'>
+        预约
+      </navigator>
+    </view>
+  </view>
+  <view class='appoints_line flex'>
+    <view class='appoints_item flex'>
+      <view class='pull-left'>
+        <view>07-28 星期六</view>
+        <view>14:40 - 14:45</view>        
+      </view>
+      <navigator url='../confirm_regist/confirm_regist' class='appoint_btn pull-left'>
+        预约
+      </navigator>
+    </view>
+    <view class='appoints_item flex'>
+      <view class='pull-left'>
+        <view>07-28 星期六</view>
+        <view>14:40 - 14:45</view>        
+      </view>
+      <navigator url='../confirm_regist/confirm_regist' class='appoint_btn pull-left'>
+        预约
+      </navigator>
+    </view>
+  </view>
+</view>

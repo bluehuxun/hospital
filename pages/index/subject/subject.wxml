@@ -1,0 +1,18 @@
+<view class='search_subject_wrap clearfix'>
+  <view class='search_wrap pull-left'>
+    <image class='search' src='{{img_url}}search.png' mode='widthFix'></image>
+  </view>
+  <input class='search_subject pull-left' placeholder="请输入科室进行搜索" value="{{name}}" bindinput="set_name" />
+</view>
+<scroll-view class='small_subject' style='height:{{small_subject_h}}px;' scroll-y='true'>
+  <view class='subject_con internal_medicine_con {{sel_subject == "internal_medicine" ? " show " : ""}}'>
+    <view wx:for="{{list}}" bindtap="get_detail" data-deptid="{{item.deptid}}">
+      <navigator url=''>
+        <text>{{item.departname}}</text>
+        <image class='subject_sel' src='{{img_url}}subject_sel.png' mode='widthFix'></image>
+      </navigator>
+    </view>
+    <view wx:if="{{list.length == 0}}" class="no_list_data">没有相关记录</view>
+  </view>
+</scroll-view>
+

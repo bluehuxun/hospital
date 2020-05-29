@@ -1,0 +1,31 @@
+<view class='header'>
+  <view class='avatar'></view>
+  <view class='product_name'>健康海盐</view>
+  <view class='version'>1.0.0</view>
+</view>
+<view>
+  <view class='mine_items'>
+    <navigator class='mine_item flex'>
+      <view class='flex'> 功能介绍</view>
+      <image src='{{img_url}}subject_sel.png' mode='widthFix' class='nav'></image>
+    </navigator>
+    <view class='mine_item flex'>
+      <view class='flex'>免责声明</view>
+      <image src='{{img_url}}subject_sel.png' mode='widthFix' class='nav'></image>
+    </view>
+    <navigator class='mine_item flex'>
+      <view class='flex'>客服中心</view>
+      <image src='{{img_url}}subject_sel.png' mode='widthFix' class='nav'></image>
+    </navigator>
+    <navigator class='mine_item flex'>
+      <view class='flex'>意见反馈</view>
+      <image src='{{img_url}}subject_sel.png' mode='widthFix' class='nav'></image>
+    </navigator>
+    <navigator hover-class='none' class='mine_item flex'>
+      <view class='flex'>
+        <button class='share' hover-class='none' open-type='share'>推荐给好友</button>
+      </view>
+      <image src='{{img_url}}subject_sel.png' mode='widthFix' class='nav'></image>
+    </navigator>
+  </view>
+</view>

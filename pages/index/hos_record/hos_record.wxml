@@ -1,0 +1,37 @@
+<!--<image src='{{img_url}}subject_sel.png' mode='widthFix' class='nav'></image>-->
+
+<view wx:if="{{list.length != 0}}">
+    <view  bindtouchstart="touchstart" bindtouchend="touchend" style="height:{{win_h}}px;">
+        <view class='report_item' wx:for="{{list}}">
+            <view class="clearfix">
+                <view class='title_left pull-left'>医院</view>
+                <view class='report_info pull-right'>{{item.hosname}}</view>
+            </view>
+            <view class="clearfix">
+                <view class='title_left pull-left'>诊断</view>
+                <view class='report_info pull-right'>{{item.zdmc}}</view>
+            </view>
+            <view class="clearfix">
+                <view class='title_left pull-left'>入院日期</view>
+                <view class='report_info pull-right'>{{item.rysj}}</view>
+            </view>
+            <view class="clearfix">
+                <view class='title_left pull-left'>出院日期</view>
+                <view class='report_info pull-right'>{{item.cysj}}</view>
+            </view>
+            <view class="clearfix">
+                <view class='title_left pull-left'>入院科室名称</view>
+                <view class='report_info pull-right'>{{item.ryksmc}}</view>
+            </view>
+        </view>
+        <block wx:if="{{!more_data}}">
+            <view class="text-center gray">没有更多数据了</view>
+        </block>
+    </view>
+</view>
+<view class="no_list_data" wx:else>
+    <view class="text-center">
+        <image src="{{img_url}}no_content.png" class="no_content"></image>
+    </view>
+    <view>暂无数据</view>
+</view>

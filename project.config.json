@@ -1,0 +1,100 @@
+{
+	"description": "项目配置文件。",
+	"packOptions": {
+		"ignore": []
+	},
+	"setting": {
+		"urlCheck": false,
+		"es6": true,
+		"postcss": true,
+		"preloadBackgroundData": false,
+		"minified": true,
+		"newFeature": true,
+		"autoAudits": false,
+		"coverView": true,
+		"showShadowRootInWxmlPanel": true,
+		"scopeDataCheck": false,
+		"checkInvalidKey": true,
+		"checkSiteMap": true,
+		"uploadWithSourceMap": true,
+		"babelSetting": {
+			"ignore": [],
+			"disablePlugins": [],
+			"outputPath": ""
+		},
+		"useCompilerModule": true,
+		"userConfirmedUseCompilerModuleSwitch": false
+	},
+	"compileType": "miniprogram",
+	"libVersion": "2.10.4",
+	"appid": "wxb4ebbb6681699459",
+	"projectname": "miniapp-HYhealth",
+	"isGameTourist": false,
+	"simulatorType": "wechat",
+	"simulatorPluginLibVersion": {},
+	"condition": {
+		"search": {
+			"current": -1,
+			"list": []
+		},
+		"conversation": {
+			"current": -1,
+			"list": []
+		},
+		"plugin": {
+			"current": -1,
+			"list": []
+		},
+		"game": {
+			"currentL": -1,
+			"list": []
+		},
+		"gamePlugin": {
+			"current": -1,
+			"list": []
+		},
+		"miniprogram": {
+			"current": 0,
+			"list": [
+				{
+					"id": 0,
+					"name": "pages/index/index/index",
+					"pathName": "pages/index/index/index",
+					"query": ""
+				},
+				{
+					"id": 1,
+					"name": "pages/index/vis_list/vis_list",
+					"pathName": "pages/index/vis_list/vis_list",
+					"query": ""
+				},
+				{
+					"id": 2,
+					"name": "pages/mine/register/register",
+					"pathName": "pages/mine/register/register",
+					"query": "id=91692&sick=4"
+				},
+				{
+					"id": 3,
+					"name": "pages/index/hos_record/hos_record",
+					"pathName": "pages/index/hos_record/hos_record",
+					"query": "idcard=330424198102170015&sick=5"
+				},
+				{
+					"id": -1,
+					"name": "pages/index/subject_info/subject_info",
+					"pathName": "pages/index/subject_info/subject_info",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": 5,
+					"name": "pages/index/physical_fill/physical_fill",
+					"pathName": "pages/index/physical_fill/physical_fill",
+					"query": "",
+					"scene": null
+				}
+			]
+		}
+	}
+}

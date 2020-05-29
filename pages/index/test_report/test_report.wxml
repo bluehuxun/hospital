@@ -1,0 +1,21 @@
+<view>
+  <view class='report_item' wx:for="{{list}}" bindtap="get_detail" data-reportno="{{item.reportno}}" data-jgdm="{{item.jgdm}}" data-assaydate="{{item.assaydate}}" data-reporttype="{{item.reporttype}}">
+    <view class='title flex'>
+      <view class='title_left'>{{item.reportname}}</view>
+        <image src='{{img_url}}subject_sel.png' mode='widthFix' class='nav'></image>
+    </view>
+    <view class='report_info'>
+      <view>
+        <image src='{{img_url}}exam_time.png' mode='widthFix' class='exma_icon'></image>
+        {{item.assaydate}}
+      </view>
+    </view>
+  </view>
+</view>
+
+<view class="no_list_data" wx:if="{{list.length == 0}}">
+  <view class="text-center">
+    <image src="{{img_url}}no_content.png" class="no_content"></image>
+  </view>
+  <view>暂无数据</view>
+</view>

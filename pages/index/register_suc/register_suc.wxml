@@ -1,0 +1,4 @@
+<view>
+    <view class="text-center">操作成功</view>
+    <navigator class="green small text-center" url="../vis_list/vis_list">点击查看就诊记录</navigator>
+</view>

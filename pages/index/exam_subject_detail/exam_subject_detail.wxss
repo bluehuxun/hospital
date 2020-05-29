@@ -1,0 +1,23 @@
+.con1{
+    width:50%;
+}
+.con2, .con3{
+    width:25%;
+}
+.title{
+    line-height: 80rpx;
+}
+.list{
+    line-height: 60rpx;
+}
+.list>view{
+    padding: 0 0 0 20rpx;
+    border-bottom: 2rpx solid #f2f2f2;
+}
+.strong{
+    font-weight: bold;
+}
+.flex_con{
+    display: flex;
+    justify-content:space-around;
+}

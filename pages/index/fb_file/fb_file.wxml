@@ -1,0 +1,385 @@
+<block wx:if="{{special_pro != ''}}">
+    <view class="top">
+        <view class="header clearfix">
+            <view class="info_left pull-left">
+                <image class="doc_head_img pull-left" src="{{img_url}}record_icon.png"></image>
+                <text class="record">记录</text>
+            </view>
+            <view class="header_right pull-left">
+                <view>
+                    <text class="doc_name">{{special_pro.xm}}</text>
+                    <block wx:if="{{special_pro.xb == 1}}">男</block>
+                    <block wx:if="{{special_pro.xb == 2}}">女</block>
+                    <text class="sznl">{{special_pro.sznl}}</text>
+                </view>
+                <view class="clearfix">
+                    <image class="sick_phone pull-left" src="{{img_url}}sick_phone.png"></image>
+                    <view class="phone_info pull-left">
+                        <block >{{special_pro.jtdh}}</block>
+                        <block >{{special_pro.lxdh}}</block>
+                        <!--<block wx:elif="{{sick == 3 || sick == 4}}">{{special_pro.lxdh}}</block>-->
+                    </view>
+                </view>
+                <view class="clearfix">
+                    <image class="home pull-left" src="{{img_url}}home.png"></image>
+                    <view class="home_info pull-left">
+                        <block >{{special_pro.jtdz}}</block>
+                        <block >{{special_pro.jzdz}}</block>
+                        <block >{{special_pro.hkxxdz}}</block>
+                    </view>
+                </view>
+            </view>
+        </view>
+        <view class="sel_tab flex_center">
+        <view bindtap="set_type" data-type="1" class="{{type == 1 ? 'active' : ''}}">
+            <block wx:if="{{sick == 1}}">高血压档案</block>
+            <block wx:elif="{{sick == 2}}">糖尿病档案</block>
+            <block wx:elif="{{sick == 3}}">冠心病档案</block>
+            <block wx:elif="{{sick == 4}}">脑卒中档案</block>
+            <block wx:elif="{{sick == 5}}">肿瘤档案</block>
+            <block wx:elif="{{sick == 6}}">儿保专项档案</block>
+            <block wx:elif="{{sick == 7}}">妇保专项档案</block>
+            <block wx:elif="{{sick == 8}}">中医体质辨识档案</block>
+           
+        </view>
+        
+       
+           <view bindtap="set_type" data-type="2" class="{{type == 2 ? 'active' : ''}}">随访记录</view>
+       
+      
+
+    </view>
+    </view>
+    <view class="bottom white_bg over_auto" style="height: {{win_h - top_h}}px;">
+        <block wx:if="{{type == 1}}">
+            <block wx:if="{{special_pro != ''}}">
+                <view class="serve_header_wrap">
+                    <view class="file_header">基本信息</view>
+                </view>
+                <view class='confirm_regist_item'>
+                <view class='margin_confirm_regist_item clearfix'>
+                            <view class="pull-left">登记编号</view>
+                            <view class='pull-right right'>{{special_pro.djbh}}</view>
+                  </view>
+                  <view class='margin_confirm_regist_item clearfix'>
+                            <view class="pull-left">孕妇姓名</view>
+                            <view class='pull-right right'>{{special_pro.xxxx}}</view>
+                  </view>
+                  <view class='margin_confirm_regist_item clearfix'>
+                            <view class="pull-left">年龄</view>
+                            <view class='pull-right right'>{{special_pro.xxxx}}</view>
+                  </view>
+                  <view class='margin_confirm_regist_item clearfix'>
+                            <view class="pull-left">工作单位</view>
+                            <view class='pull-right right'>{{special_pro.xxxx}}</view>
+                  </view>
+                  <view class='margin_confirm_regist_item clearfix'>
+                            <view class="pull-left">联系电话</view>
+                            <view class='pull-right right'>{{special_pro.lxdh}}</view>
+                  </view>
+                  <view class='margin_confirm_regist_item clearfix'>
+                            <view class="pull-left">丈夫姓名</view>
+                            <view class='pull-right right'>{{special_pro.xxxx}}</view>
+                  </view>
+                  <view class='margin_confirm_regist_item clearfix'>
+                            <view class="pull-left">丈夫电话</view>
+                            <view class='pull-right right'>{{special_pro.xxxx}}</view>
+                  </view>
+                  <view class='margin_confirm_regist_item clearfix'>
+                            <view class="pull-left">户籍详细地址</view>
+                            <view class='pull-right right'>{{special_pro.hkszdz}}</view>
+                  </view>
+                  <view class='margin_confirm_regist_item clearfix'>
+                            <view class="pull-left">现居住地址</view>
+                            <view class='pull-right right'>{{special_pro.hkszdz}}</view>
+                  </view>
+                  <view class='margin_confirm_regist_item clearfix'>
+                            <view class="pull-left">产后休养详细地址</view>
+                            <view class='pull-right right'>{{special_pro.xxxx}}</view>
+                  </view>
+                  <view class='margin_confirm_regist_item clearfix'>
+                            <view class="pull-left">产后休养地电话</view>
+                            <view class='pull-right right'>{{special_pro.lxdh}}</view>
+                  </view>
+                  <view class='margin_confirm_regist_item clearfix'>
+                            <view class="pull-left">末次月经日期</view>
+                            <view class='pull-right right'>{{special_pro.mcyjrq}}</view>
+                  </view>
+                  <view class='margin_confirm_regist_item clearfix'>
+                            <view class="pull-left">预产期</view>
+                            <view class='pull-right right'>{{special_pro.xxxx}}</view>
+                  </view>
+                  </view>
+              
+              
+              
+              
+              
+              
+              
+                  <!--<view class='confirm_regist_item'>
+                      <view class='margin_confirm_regist_item clearfix'>
+                            <view class="pull-left">随访编号</view>
+                            <view class='pull-right right'>{{special_pro.sfbh}}</view>
+                  </view>
+                  <view class='margin_confirm_regist_item clearfix'>
+                            <view class="pull-left">随访日期</view>
+                            <view class='pull-right right'>{{special_pro.sfrq}}</view>
+                  </view>
+                  <view class='margin_confirm_regist_item clearfix'>
+                            <view class="pull-left">随访医生姓名</view>
+                            <view class='pull-right right'>{{special_pro.sfysxm}}</view>
+                  </view>
+                  <view class='margin_confirm_regist_item clearfix'>
+                            <view class="pull-left">随访单位</view>
+                            <view class='pull-right right'>{{special_pro.sfdw}}</view>
+                  </view>
+                  
+                  <view class='margin_confirm_regist_item clearfix'>
+                            <view class="pull-left">随访类型</view>
+                            <view class='pull-right right'>
+                                <block wx:if="{{special_pro.zdyj == 1}}">产前随访</block>
+                                <block wx:elif="{{special_pro.zdyj == 2}}">高危随访</block>
+                                <block wx:elif="{{special_pro.zdyj == 3}}">产时</block>
+                                <block wx:elif="{{special_pro.zdyj == 4}}">产后访视</block>                      
+                            </view>
+                  </view>
+                        
+                  <view class='margin_confirm_regist_item clearfix'>
+                            <view class="pull-left">当前孕周周数</view>
+                            <view class='pull-right right'>{{special_pro.dqyzzs}}</view>
+                  </view>
+                  <view class='margin_confirm_regist_item clearfix'>
+                            <view class="pull-left">随访次数</view>
+                            <view class='pull-right right'>{{special_pro.sfcs}}</view>
+                  </view>
+                  <view class='margin_confirm_regist_item clearfix'>
+                            <view class="pull-left">血压（收缩压/舒张压）</view>
+                            <view class='pull-right right'>{{special_pro.xy}}</view>
+                  </view>
+                  <view class='margin_confirm_regist_item clearfix'>
+                            <view class="pull-left">体重</view>
+                            <view class='pull-right right'>{{special_pro.tz}}</view>
+                  </view>
+                  <view class='margin_confirm_regist_item clearfix'>
+                            <view class="pull-left">宫高</view>
+                            <view class='pull-right right'>{{special_pro.gg}}</view>
+                  </view>
+                  <view class='margin_confirm_regist_item clearfix'>
+                            <view class="pull-left">腹围</view>
+                            <view class='pull-right right'>{{special_pro.fw}}</view>
+                  </view>
+                  <view class='margin_confirm_regist_item clearfix'>
+                            <view class="pull-left">胎位</view>
+                            <view class='pull-right right'>{{special_pro.tw}}</view>
+                  </view>
+                  <view class='margin_confirm_regist_item clearfix'>
+                            <view class="pull-left">血红蛋白</view>
+                            <view class='pull-right right'>{{special_pro.xhdb}}</view>
+                  </view>
+                  <view class='margin_confirm_regist_item clearfix'>
+                            <view class="pull-left">水肿程度</view>
+                            <view class='pull-right right'>{{special_pro.szcd}}</view>
+                  </view>
+                  <view class='margin_confirm_regist_item clearfix'>
+                            <view class="pull-left">主要症状</view>
+                            <view class='pull-right right'>{{special_pro.zyzz}}</view>
+                  </view>
+                  <view class='margin_confirm_regist_item clearfix'>
+                            <view class="pull-left">主要体征</view>
+                            <view class='pull-right right'>{{special_pro.zytz}}</view>
+                  </view>
+                  <view class='margin_confirm_regist_item clearfix'>
+                            <view class="pull-left">娩出日期</view>
+                            <view class='pull-right right'>{{special_pro.mcrq}}</view>
+                  </view>
+                  <view class='margin_confirm_regist_item clearfix'>
+                            <view class="pull-left">分娩地点</view>
+                            <view class='pull-right right'>{{special_pro.fmdd}}</view>
+                  </view>
+                  <view class='margin_confirm_regist_item clearfix'>
+                            <view class="pull-left">分娩方式</view>
+                            <view class='pull-right right'>{{special_pro.fmfs}}</view>
+                  </view>
+                  <view class='margin_confirm_regist_item clearfix'>
+                            <view class="pull-left">产后第几天</view>
+                            <view class='pull-right right'>{{special_pro.chdjt}}</view>
+                  </view>
+                  <view class='margin_confirm_regist_item clearfix'>
+                            <view class="pull-left">体温</view>
+                            <view class='pull-right right'>{{special_pro.tw}}</view>
+                  </view>
+                  <view class='margin_confirm_regist_item clearfix'>
+                            <view class="pull-left">乳汁</view>
+                            <view class='pull-right right'>{{special_pro.rz}}</view>
+                  </view>
+                  <view class='margin_confirm_regist_item clearfix'>
+                            <view class="pull-left">乳房</view>
+                            <view class='pull-right right'>{{special_pro.rf}}</view>
+                  </view>
+                  <view class='margin_confirm_regist_item clearfix'>
+                            <view class="pull-left">恶露</view>
+                            <view class='pull-right right'>{{special_pro.el}}</view>
+                  </view>
+                  <view class='margin_confirm_regist_item clearfix'>
+                            <view class="pull-left">宫底高度</view>
+                            <view class='pull-right right'>{{special_pro.gdgd}}</view>
+                  </view>
+                  <view class='margin_confirm_regist_item clearfix'>
+                            <view class="pull-left">产时结局</view>
+                            <view class='pull-right right'>{{special_pro.csjj}}</view>
+                  </view>   
+                  </view> --> 
+                   </block> 
+                    </block>
+            <block wx:else>
+                <view class="no_list_data">
+                    <view class="text-center">
+                        <image src="{{img_url}}no_content.png" class="no_content"></image>
+                    </view>
+                    <view>正在开发中</view>
+                </view>
+                
+            </block>
+            </view>
+        </block>
+        <block wx:else>
+            <block wx:if="{{list.length > 0}}">
+                <view class="serve_header_wrap">
+                    <view class="serve_header">服务记录</view>
+                </view>
+                <view class="list" bindtouchstart="touchstart" bindtouchend="touchend">
+                <view class="line"></view>
+                <view wx:for="{{list}}" wx:for-item="list_item" bindtap="to_detail" data-id="{{list_item.id}}">
+                    <image class="blue_solid" src="http://www.healthyuhang.com:8180/yhapp/img/blue_solid.png"></image>
+                    <view>
+                        <view>{{list_item.sfrq}}</view>
+                        <view class="clearfix">
+                            <view class="pull-left">随访编号：</view>
+                            <view class="pull-right">{{list_item.id}}</view>
+                        </view>
+                        <block wx:if="{{sick == 1 || sick == 2 }}">
+                            <view class="clearfix">
+                                <view class="pull-left">随访医生姓名：</view>
+                                <view class="pull-right">{{list_item.sfysxm}}</view>
+                            </view>
+                             <view class="clearfix">
+                                <view class="pull-left">健康指导：</view>
+                                <view class="pull-right">{{list_item.jkzd}}</view>
+                            </view>
+                            <view class="clearfix">
+                                <view class="pull-left">随访方式：</view>
+                                <view class="pull-right">
+                                    <block wx:if="{{list_item.sffs == 3}}">门诊随访</block>
+                                    <block wx:elif="{{list_item.sffs == 2}}">家庭随访</block>
+                                    <block wx:elif="{{list_item.sffs == 1}}">电话随访</block>
+                                    <block wx:elif="{{list_item.sffs == 4}}">集中面访</block>
+                                </view>
+                            </view>
+                        </block>
+                         <block wx:if="{{sick == 8}}">
+                            <view class="clearfix">
+                                <view class="pull-left">姓名：</view>
+                                <view class="pull-right">{{list_item.xm}}</view>
+                            </view>
+                         <view class="clearfix">
+                                <view class="pull-left">评估医生姓名：</view>
+                                <view class="pull-right">{{list_item.pgysxm}}</view>
+                            </view>
+
+                        </block>
+                        <block wx:elif="{{sick == 3}}">
+                            <view class="clearfix">
+                                <view class="pull-left">指导建议：</view>
+                                <view class="pull-right">{{list_item.zdjy}}</view>
+                            </view>
+                        </block>
+                        <block wx:elif="{{sick == 4}}">
+                            <view class="clearfix">
+                                <view class="pull-left">指导建议：</view>
+                                <view class="pull-right">{{list_item.zdjy}}</view>
+                            </view>
+                            <view class="clearfix">
+                                <view class="pull-left">是否首次随访：</view>
+                                <view class="pull-right">
+                                    <block wx:if="{{list_item.sfscsf == 0}}">否</block>
+                                    <block wx:else>是</block>
+                                </view>
+                            </view>
+                            <view class="clearfix">
+                                <view class="pull-left">治疗情况：</view>
+                                <view class="pull-right">
+                                    <block wx:if="{{list_item.zlqk == 1}}">门诊治疗</block>
+                                    <block wx:elif="{{list_item.zlqk == 2}}">急诊抢救</block>
+                                    <block wx:elif="{{list_item.zlqk == 3}}">住院治疗</block>
+                                    <block wx:elif="{{list_item.zlqk == 4}}">自我服药</block>
+                                    <block wx:elif="{{list_item.zlqk == 5}}">未治疗</block>
+                                </view>
+                            </view>
+                        </block>
+                        <block wx:elif="{{sick == 5}}">
+                            <view class="clearfix">
+                                <view class="pull-left">是否首次随访：</view>
+                                <view class="pull-right">
+                                    <block wx:if="{{list_item.sfscsf == 0}}">否</block>
+                                    <block wx:else>是</block>
+                                </view>
+                            </view>
+                            <view class="clearfix">
+                                <view class="pull-left">随访方式：</view>
+                                <view class="pull-right">
+                                    <block wx:if="{{list_item.sffs == 1}}">电话随访</block>
+                                    <block wx:elif="{{list_item.sffs == 2}}">家庭随访</block>
+                                    <block wx:elif="{{list_item.sffs == 3}}">门诊随访</block>
+                                </view>
+                            </view>
+                            <view class="clearfix">
+                                <view class="pull-left">随访医生：</view>
+                                <view class="pull-right">{{list_item.sfysxm}}</view>
+                            </view>
+                        </block>
+                          <block wx:if="{{sick != 8}}">
+                        <view class="clearfix">
+                            <view class="pull-left">随访日期：</view>
+                            <view class="pull-right">{{list_item.sfrq}}</view>
+                        </view>
+                            </block>
+                             <block wx:if="{{sick == 8}}">
+                        <view class="clearfix">
+                            <view class="pull-left">评估日期：</view>
+                            <view class="pull-right">{{list_item.pgrq}}</view>
+                        </view>
+                            </block>
+                        <!--<view class="time">2018-09-22</view>-->
+                        <!--<view class="clearfix">-->
+                            <!--<view class="pull-left">-->
+                                <!--<text class="info_left">服务医生：</text>-->
+                                <!--<text class="info_right">蔡旭</text>-->
+                            <!--</view>-->
+                            <!--<view class="pull-left">-->
+                                <!--<text class="info_left">服务方式：</text>-->
+                                <!--<text class="info_right">上门随访</text>-->
+                            <!--</view>-->
+                        <!--</view>-->
+                        <!--<view>-->
+                            <!--<text class="info_left">家庭住址：</text>-->
+                            <!--<text class="info_right">余杭区仓前街道海曙路38号一单元</text>-->
+                        <!--</view>-->
+                        <!--<view>-->
+                            <!--<text class="info_left">服务小结：</text>-->
+                            <!--<text class="info_right">很好</text>-->
+                        <!--</view>-->
+                    </view>
+                </view>
+            </view>
+            </block>
+            <view wx:if='{{list.length == 0}}'>
+                <view class="no_list_data">
+                    <view class="text-center">
+                        <image src="{{img_url}}no_content.png" class="no_content"></image>
+                    </view>
+                    <view>暂无数据</view>
+                </view>
+            </view>
+             
+</block>

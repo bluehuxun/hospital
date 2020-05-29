@@ -1,0 +1,33 @@
+<!--<image src='{{img_url}}subject_sel.png' mode='widthFix' class='nav'></image>-->
+
+<view wx:if="{{list.length != 0}}">
+    <view class="header">
+        <view class="info_header clearfix">
+            <text>{{patname}}</text>
+            <text class="green small pull-right">{{hosname}}</text>
+        </view>
+        <view>身份证号：{{idnum}}</view>
+        <view>性别：{{sex}}</view>
+        <view>年龄：{{age}}</view>
+    </view>
+    <view class="tip">此报告仅作参考，以医院纸质报告为准!</view>
+    <view class='report_item flex' wx:for="{{list}}" bindtap="get_detail" data-pexamid="{{item.pexamid}}" data-jgdm="{{item.jgdm}}" data-examname="{{item.examname}}" data-examdate="{{item.examdate}}" data-bdate="{{item.bdate}}" data-hosname="{{item.hosname}}" data-tjzj="{{item.tjzj}}" data-jkjy="{{item.jkjy}}">
+        <view class='title'>
+            <view class='title_left'>{{item.examname}}</view>
+            <view class='report_info'>
+                <view>
+                    {{item.bdate}}
+                </view>
+            </view>
+        </view>
+        <view>
+            <image src='{{img_url}}subject_sel.png' mode='widthFix' class='nav'></image>
+        </view>
+    </view>
+</view>
+<view class="no_list_data" wx:else>
+    <view class="text-center">
+        <image src="{{img_url}}no_content.png" class="no_content"></image>
+    </view>
+    <view>暂无数据</view>
+</view>

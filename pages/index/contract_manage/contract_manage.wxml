@@ -1,0 +1,39 @@
+<view class="list">
+    <view class='clearfix' wx:for="{{list}}">
+        <view class='clearfix'>
+            <image class="icon" mode="widthFix" src="{{img_url}}time.png"></image>
+            <text>{{item.sxrq}}至{{item.dqrq}}</text>
+            <view style="text-align: right;flex:1;">
+                <text class="signed pull-right" wx:if="{{item.qyzt == 2}}">已签约</text>
+                <text class="break_signed pull-right" wx:else>已解约</text>
+            </view>
+
+        </view>
+        <view class='clearfix'>
+            <view class='pull-left'>签约医生</view>
+            <view class='pull-right'>{{item.ysxm}}</view>
+        </view>
+        <view class='clearfix'>
+            <view class='pull-left'>医院名称</view>
+            <view class='pull-right'>{{item.qyjg}}</view>
+        </view>
+        <view class='clearfix'>
+            <view class='pull-left'>联系电话</view>
+            <view class='pull-right'>
+                <block wx:if="{{item.yslxdh == null}}">暂无</block>
+                <block wx:else>{{item.yslxdh}}</block>
+            </view>
+        </view>
+        <view class='clearfix'>
+            <view class='pull-left'>签约团队</view>
+            <view class='pull-right' wx:if="{{item.qytd == null || item.qytd == 'null'}}">暂无签约团队</view>
+            <view class='pull-right' wx:else>{{item.qytd}}</view>
+        </view>
+    </view>
+</view>
+<view class="no_list_data" wx:if="{{list.length == 0}}">
+    <view class="text-center">
+        <image src="{{img_url}}no_content.png" class="no_content"></image>
+    </view>
+    <view>暂无数据</view>
+</view>

@@ -1,0 +1,65 @@
+<view class="list">
+    <view wx:for="{{list}}" wx:for-index="idx">
+        <view>
+            <view class="flex_center clearfix">
+                <view class="month_wrap pull-left">
+                    <image class="month" src="{{img_url}}month.png" mode="widthFix"></image>
+                    <text class="month_text">
+                        {{item.month}}月
+                    </text>
+                </view>
+                <view class="datetime_wrap pull-left">
+                    {{item.datetime}}
+                </view>
+            </view>
+            <view hidden="{{item.cancel_sign==0?false:true}}">
+                <image class="status_icon" src="{{img_url}}success.png"></image>
+                预约成功
+            </view>
+            
+            <view hidden="{{item.cancel_sign==1?false:true}}">
+                <image class="status_icon" src="{{img_url}}success.png"></image>
+                取消预约
+            </view>
+        </view>
+        <view data-hosnum="{{item.hosnum}}">
+            <image class="status_icon" src="{{img_url}}hospital_icon.png"></image>
+            医院：
+            {{item.hosname}}
+        </view>
+        <view>
+            <image class="status_icon" src="{{img_url}}subject_icon.png"></image>
+            科室：
+            {{item.dept_name}}
+        </view>
+        <block wx:if="{{item.doc_name != '' && item.doc_name != null && item.doc_name != undefined}}">
+            <view data-docname="{{item.doc_name}}">
+                <image class="status_icon" src="{{img_url}}doc_icon.png"></image>
+                医生：
+                {{item.doc_name}}
+            </view>
+        </block>
+        <view class="clearfix">
+            <view class="half pull-left" data-hzmc="{{item.hzmc}}">
+                <image class="status_icon" src="{{img_url}}appoint_people.png"></image>
+                预约人： {{item.hzmc}}
+            </view>
+            <view class="half pull-left">
+                <image class="status_icon" src="{{img_url}}appoint_people.png"></image>
+                预约号：{{item.resno}}
+            </view>
+        </view>
+        <view>
+            <image class="status_icon" src="{{img_url}}subject_icon.png"></image>
+            预约时间：
+            {{item.regtime}} {{item.regdate}} {{item.schtime}}
+        </view>
+        
+        <block wx:if="{{item.doc_name != '' && item.doc_name != undefined && item.doc_name != null }}">
+            <view>医生姓名 {{item.doc_name}}</view>
+        </block>
+        <view class="clearfix" hidden="{{item.cancel_sign==0?false:true}}">
+          <button class="btn-cencle" bindtap="btnclick" data-info="{{idx}}">取消预约</button>
+        </view>
+    </view>
+</view>

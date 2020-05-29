@@ -1,0 +1,35 @@
+<view>
+  <view class='mine_items'>
+    <view class='mine_item clearfix'>
+      <view class="pull-left">
+        手机
+      </view>
+      <view class="info_right pull-left">
+        <input type="number" bindinput="get_phone" value="{{phone}}" placeholder="请输入手机号码" />
+        <button hover-class='none' class='get_code' disabled='{{btn_disabled}}' size='mini' bindtap='get_code'>{{get_code_text}}</button>
+      </view>
+    </view>
+    <view class='mine_item clearfix'>
+      <view class="pull-left">
+        验证码
+      </view>
+      <view class="pull-left">
+        <input bindinput="get_pass" value="{{pass}}" placeholder="请输入验证码" />
+      </view>
+    </view>
+  </view>
+  <view class="agree">
+    <checkbox-group bindchange="checkboxChange">
+      <label class="checkbox clearfix" wx:for="{{items}}">
+          <view class="pull-left">
+              <checkbox value="{{item.name}}" checked="{{item.checked}}" color="#1abb85" />
+              我同意
+          </view>
+          <navigator class="agree_con pull-left" url="">《用户服务协议》</navigator>
+      </label>
+    </checkbox-group>
+  </view>
+  <view class="submit_wrap">
+    <button class="submit" bindtap="submit">立即注册</button>
+  </view>
+</view>

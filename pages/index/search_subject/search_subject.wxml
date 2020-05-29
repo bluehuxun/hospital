@@ -1,0 +1,146 @@
+<view class='search_subject_wrap clearfix'>
+  <view class='search_wrap pull-left'>
+    <image class='search' src='{{img_url}}search.png' mode='widthFix'></image>
+  </view>
+  <input class='search_subject pull-left' placeholder="请输入科室进行搜索" />
+</view>
+<view class='subjects'>
+  <block wx:if='{{sel_subject == "true"}}'>  
+    <scroll-view class='small_subject pull-left' style='height:{{small_subject_h}}px;' scroll-y='true'>
+      <view class='subject_con internal_medicine_con'>
+        <view>
+          <navigator url='../sel_doctor/sel_doctor'>
+            <text>(门)心血管内科</text>
+            <image class='subject_sel' src='{{img_url}}subject_sel.png' mode='widthFix'></image>
+          </navigator>
+        </view>
+        <view>
+          <navigator url='../sel_doctor/sel_doctor'>
+            <text>(门)心血管内科</text>
+            <image class='subject_sel' src='{{img_url}}subject_sel.png' mode='widthFix'></image>
+          </navigator>
+        </view>
+        <view>
+          <navigator url='../sel_doctor/sel_doctor'>
+            <text>(门)心血管内科</text>
+            <image class='subject_sel' src='{{img_url}}subject_sel.png' mode='widthFix'></image>
+          </navigator>
+        </view>
+        <view>
+          <navigator url='../sel_doctor/sel_doctor'>
+            <text>(门)心血管内科</text>
+            <image class='subject_sel' src='{{img_url}}subject_sel.png' mode='widthFix'></image>
+          </navigator>
+        </view>
+        <view>
+          <navigator url='../sel_doctor/sel_doctor'>
+            <text>(门)心血管内科</text>
+            <image class='subject_sel' src='{{img_url}}subject_sel.png' mode='widthFix'></image>
+          </navigator>
+        </view>
+        <view>
+          <navigator url='../sel_doctor/sel_doctor'>
+            <text>(门)心血管内科</text>
+            <image class='subject_sel' src='{{img_url}}subject_sel.png' mode='widthFix'></image>
+          </navigator>
+        </view>
+        <view>
+          <navigator url='../sel_doctor/sel_doctor'>
+            <text>(门)心血管内科</text>
+            <image class='subject_sel' src='{{img_url}}subject_sel.png' mode='widthFix'></image>
+          </navigator>
+        </view>
+        <view>
+          <navigator url='../sel_doctor/sel_doctor'>
+            <text>(门)心血管内科</text>
+            <image class='subject_sel' src='{{img_url}}subject_sel.png' mode='widthFix'></image>
+          </navigator>
+        </view>
+        <view>
+          <navigator url='../sel_doctor/sel_doctor'>
+            <text>(门)心血管内科</text>
+            <image class='subject_sel' src='{{img_url}}subject_sel.png' mode='widthFix'></image>
+          </navigator>
+        </view>
+        <view>
+          <navigator url='../sel_doctor/sel_doctor'>
+            <text>(门)心血管内科</text>
+            <image class='subject_sel' src='{{img_url}}subject_sel.png' mode='widthFix'></image>
+          </navigator>
+        </view>
+        <view>
+          <navigator url='../sel_doctor/sel_doctor'>
+            <text>(门)心血管内科</text>
+            <image class='subject_sel' src='{{img_url}}subject_sel.png' mode='widthFix'></image>
+          </navigator>
+        </view>
+        <view>
+          <navigator url='../sel_doctor/sel_doctor'>
+            <text>(门)心血管内科</text>
+            <image class='subject_sel' src='{{img_url}}subject_sel.png' mode='widthFix'></image>
+          </navigator>
+        </view>
+        <view>
+          <navigator url='../sel_doctor/sel_doctor'>
+            <text>(门)心血管内科</text>
+            <image class='subject_sel' src='{{img_url}}subject_sel.png' mode='widthFix'></image>
+          </navigator>
+        </view>
+        <view>
+          <navigator url='../sel_doctor/sel_doctor'>
+            <text>(门)心血管内科</text>
+            <image class='subject_sel' src='{{img_url}}subject_sel.png' mode='widthFix'></image>
+          </navigator>
+        </view>
+        <view>
+          <navigator url='../sel_doctor/sel_doctor'>
+            <text>(门)心血管内科</text>
+            <image class='subject_sel' src='{{img_url}}subject_sel.png' mode='widthFix'></image>
+          </navigator>
+        </view>
+        <view>
+          <navigator url='../sel_doctor/sel_doctor'>
+            <text>(门)心血管内科</text>
+            <image class='subject_sel' src='{{img_url}}subject_sel.png' mode='widthFix'></image>
+          </navigator>
+        </view>
+        <view>
+          <navigator url='../sel_doctor/sel_doctor'>
+            <text>(门)心血管内科</text>
+            <image class='subject_sel' src='{{img_url}}subject_sel.png' mode='widthFix'></image>
+          </navigator>
+        </view>
+        <view>
+          <navigator url='../sel_doctor/sel_doctor'>
+            <text>(门)心血管内科</text>
+            <image class='subject_sel' src='{{img_url}}subject_sel.png' mode='widthFix'></image>
+          </navigator>
+        </view>
+        <view>
+          <navigator url='../sel_doctor/sel_doctor'>
+            <text>(门)心血管内科</text>
+            <image class='subject_sel' src='{{img_url}}subject_sel.png' mode='widthFix'></image>
+          </navigator>
+        </view>
+        <view>
+          <navigator url='../sel_doctor/sel_doctor'>
+            <text>(门)心血管内科</text>
+            <image class='subject_sel' src='{{img_url}}subject_sel.png' mode='widthFix'></image>
+          </navigator>
+        </view>
+        <view>
+          <navigator url='../sel_doctor/sel_doctor'>
+            <text>(门)心血管内科</text>
+            <image class='subject_sel' src='{{img_url}}subject_sel.png' mode='widthFix'></image>
+          </navigator>
+        </view>
+      </view>
+    </scroll-view>
+  </block>
+  <block wx:else>
+    <view class='empty_result text-center'>
+      <image class='no_content' src='{{img_url}}no_content.png' mode='widthFix'></image>
+      <view>未搜索到匹配科室</view>
+    </view>
+  </block>
+</view>

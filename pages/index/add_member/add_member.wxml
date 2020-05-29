@@ -1,0 +1,31 @@
+<view>
+  <view class='flex'>
+    <view class='info_left'>姓名</view>
+    <view class='info_right'>
+      <input bindinput="set_name" placeholder='请输入家属姓名'></input>
+    </view>    
+  </view>
+  <!--<view class='flex'>-->
+    <!--<view class='info_left'><span class='red'>*</span>家属性别</view>-->
+    <!--<view class='info_right'>-->
+      <!--<picker bindchange="set_gender" value="{{gender_index}}" range="{{genders}}">-->
+        <!--<view class="picker">-->
+          <!--{{genders[gender_index]}}-->
+        <!--</view>-->
+      <!--</picker>-->
+    <!--</view>    -->
+  <!--</view>-->
+  <view class='flex'>
+    <view class='info_left'>身份证号</view>
+    <view class='info_right'>
+      <input bindinput="set_id" placeholder='请输入家属身份证号' type='idcard'></input>
+    </view>    
+  </view>
+  <view class='flex'>
+    <view class='info_left'>电话号码</view>
+    <view class='info_right'>
+      <input bindinput="set_phone" placeholder='请输入家属电话号码' type='number'></input>
+    </view>    
+  </view>
+</view>
+<view class='save' bindtap='save'>保存</view>

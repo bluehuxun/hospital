@@ -1,0 +1,44 @@
+.avatar{
+  width:100rpx;
+}
+.mine_items{
+  border-top:20rpx solid #F2F2F2;
+  color:#272727;
+}
+.mine_items text{
+  color:#666666;
+}
+.mine_item{
+  border-top:2rpx solid #F2F2F2;
+  min-height:80rpx;
+  justify-content:space-between;
+  padding:20rpx 30rpx;
+}
+.last_mine_item{
+  border-bottom:2rpx solid #F2F2F2;  
+}
+.mine_icon{
+  width:50rpx;
+  margin:0 30rpx 0 0;
+}
+.nav{
+  width:20rpx;
+}
+.id_card{
+  border-bottom:20rpx solid #F2F2F2;
+}
+.mine_item view:first-child{
+  width:160rpx;
+}
+.info_right{
+  width:calc(100% - 160rpx);
+}
+.opers{
+  padding: 0 30rpx;
+}
+.register{
+  width: 100%;
+  text-align: center;
+  position: absolute;
+  top:0;
+}

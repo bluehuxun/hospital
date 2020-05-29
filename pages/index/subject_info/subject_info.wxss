@@ -1,0 +1,157 @@
+page {
+  background: #f1f1f1;
+  font-size: 30rpx;
+}
+.inform {
+  width: 96%;
+  margin: 20rpx auto;
+  background: #fff;
+  border-radius: 10rpx;
+  font-size: 24rpx;
+  color: rgb(254, 177, 55);
+  padding: 10rpx 40rpx;
+  box-shadow: rgba(0, 0, 0, 0.15) 0px 3px 10px 0px;
+  line-height: 42rpx;
+}
+.inform .icon {
+  width: 26rpx;
+  height: 26rpx;
+}
+.header_nav {
+  height: 60px;
+  padding: 20rpx 20rpx;
+  display: flex;
+  background: #fff;
+  align-item: center;
+  box-sizing: border-box;
+}
+.header_nav_item {
+  display: flex;
+  align-items: center;
+}
+.flex1 {
+  flex: 1;
+}
+.nav {
+  width: 24rpx;
+  /* position: relative;
+  top:20rpx; */
+}
+.time_nav {
+  width: 14rpx;
+  transform: rotate(90deg);
+  margin: 0 0 0 20rpx;
+}
+.avatar {
+  width: 80rpx;
+  /* position: relative;
+  top:8rpx; */
+  margin: 0 10rpx 0 0;
+}
+.select_time_title,
+.select_time {
+  line-height: 30px;
+  padding: 0 20rpx;
+}
+.select_time {
+  background: #fff;
+}
+.header {
+  background: #fff;
+  text-align: center;
+  color: #979797;
+  font-size: 28rpx;
+  white-space: nowrap;
+  margin: 0 0 20rpx 0;
+}
+.header .header_view {
+  width: 14.285%;
+  padding: 6px 0;
+  display: inline-block;
+}
+.header .active {
+  color: #1abb85;
+  border-bottom: 6rpx solid #1abb85;
+}
+.search {
+  width: 14px;
+}
+.search_wrap {
+  width: 30px;
+  background: #fff;
+  display: flex;
+  height: 40px;
+  align-items: center;
+  justify-content: center;
+  border-top-left-radius: 4px;
+  border-bottom-left-radius: 4px;
+}
+.search_subject_wrap {
+  border-radius: 10px;
+  padding: 10px 0 10px 10px;
+}
+.search_subject {
+  width: calc(100% - 40px);
+  background: #ffffff;
+  height: 40px;
+  border-top-right-radius: 4px;
+  border-bottom-right-radius: 4px;
+}
+.subjects > view {
+  background: #fff;
+  border-bottom: 2rpx solid #f2f2f2;
+}
+.subjects > view > view {
+  line-height: 40px;
+  padding: 0 0 0 20rpx;
+}
+.big_subject {
+  width: 40%;
+  overflow: auto;
+}
+.big_subject view {
+  color: #a5a5a5;
+}
+.big_subject > .active {
+  background: #fff;
+  color: #5dbc84;
+  border-left: 3px solid #5dbc84;
+}
+.small_subject {
+  /*width:60%;*/
+  background: #fff;
+  overflow: auto;
+}
+.small_subject view {
+  color: #333333;
+}
+.small_subject .subject_con {
+  display: none;
+}
+.small_subject .show {
+  display: block;
+}
+.small_subject .subject_con view navigator {
+  background: #fff;
+  border-bottom: 1px solid #eeeeee;
+  line-height: 40px;
+  padding: 0 6px;
+  display: flex;
+  align-items: center;
+  align-content: space-around;
+  justify-content: space-between;
+}
+.subject_sel {
+  width: 10px;
+}
+.big {
+  font-size: 50rpx;
+  color: #ffae36;
+}
+.small {
+  font-size: 28rpx;
+  color: #dddddd;
+}
+.num_info {
+  margin: 0 20rpx 0 0;
+}

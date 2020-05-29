@@ -1,0 +1,65 @@
+<view class="appoint_info_wrap">
+    <view class="appoint_con" style="height: {{win_h - 60}}px;">
+        <view class="header">
+            <image class="appoint_know" src="{{img_url}}appoint_know.png" mode="widthFix"></image>
+            网上预约挂号须知
+        </view>
+        <view class="appoint_know_top_wrap">
+            <image class="appoint_know_top" src="{{img_url}}appoint_know_top.png" mode="widthFix"></image>
+        </view>
+        <view class="appoint_info">
+            <view>总则：线上预约的号请以医院实际情况为准。</view>
+            <view wx:if="{{hos==6}}">1、本院所有门诊号源部分可以预约挂号，预约提前一天到一周之内的号，不能预约当天的号,预约挂号不收取预约费,挂号费与日常门诊相同;</view>
+            <view wx:else>1、本院所有门诊号源均可以预约挂号，预约提前一天到一周之内的号，不能预约当天的号，预约挂号不收取预约费，挂号费与日常门诊相同；</view>
+            <view wx:if="{{hos==6}}">2、（儿童、成人）预防接种门诊和儿童保健门诊、儿童发育筛查门诊仅接受网上预约不接受现场取号，成人预防接种门诊预约不包含四价HPV首针及9价HPV首针，请拨打HPV预约专线，工作人员会按先后通知您接种；</view>
+            <view wx:else>2、手机预约挂号采用实名制，预约时须知如实提供患者本，人的姓名、身份证号码、联系电话等信息，复诊病人请提供就诊卡(门诊号) ；</view>
+            <view wx:if="{{hos==6}}">3、手机预约挂号采用实名制,预约时须知如实提供患者本人的姓名、身份证号码、联系电话等信息；</view>
+            <view wx:else>3、用户需在预约前确定好自己需求就诊的科室及专家,预约成功后,挂号信息不可改,如果更改需要取消原先预约,再重新预约;</view>
+            <view wx:if="{{hos==6}}">4、用户需在预约前确定好自己需求就诊的科室及专家,预约成功后,挂号信息不可改,如果更改需要取消原先预约,再重新预约。</view>
+            <view wx:else>4、预约挂号流程:选择相应科室一选择预约医生一选择预约日期-选择相应号源;</view>
+
+            <view wx:if="{{hos==6}}">5、预约挂号流程:选择相应科室一选择预约医生一选择预约日期-选择相应号源;</view>
+            <view wx:else>5、预约成功后,你注册的手机号码会收到短信,请根据短信提示时间前来门诊挂号就诊;</view>
+            <view wx:if="{{hos==6}}">6、预约成功后,你注册的手机号码会收到短信,请根据短信提示时间前来门诊挂号就诊;</view>
+            <view wx:else>6、就诊人凭本人身份证或市民卡到门诊任何挂号收费窗口均可挂号预约的序号。如未按时就诊,系统按失约处理;</view>
+            <view wx:if="{{hos==6}}">7、就诊人凭本人身份证或市民卡到门诊任何挂号收费窗口均可挂号预约的序号。 如未按时就诊,系统按失约处理;</view>
+            <view wx:else>7、失约处理:半年内失约三次,系统自动锁定进入黑名单,取消预约者第三次失约之日起一年内预约资格;</view>
+            <view wx:if="{{hos==6}}">8、失约处理:半年内失约三次,系统自动锁定进入黑名单,取消预约者第三次失约之日起一年内预约资格;</view>
+            <view wx:else>8、如出现专家专科停代诊特殊情况,如给您造成不便,敬请谅解。工作人员会通过短信方式通知已预约用户,请用户配合更改就诊日期或更换其它医生;</view>
+            <view wx:if="{{hos==6}}">9、如出现专家专科停代诊特殊情况,如给您造成不便,敬请谅解。 工作人员会通知已预约用户,请用户配合更改就诊日期或更换其它医生;</view>
+            <view wx:else>9、温馨提示:请务必留下您正确的电话号码,保持联系畅通。以便于专家专科停代诊通知到您。 若有不周之处敬请谅解!</view>
+            <view wx:if="{{hos==6}}">10、温馨提示:请务必留下您正确的电话号码,保持联系畅通。 以便于专家专科停代诊通知到您。 若有不周之处敬请谅解；</view>
+            <block wx:if="{{hos == 1}}">
+                <view>10、咨询电话: 0573 - 86965986</view>
+                <view>海盐县人民医院门诊部</view>
+            </block>
+            <block wx:if="{{hos == 2}}">
+                <view>10、咨询电话: 0573 - 86023817</view>
+                <view>海盐县中医院</view>
+            </block>
+            <block wx:if="{{hos == 3}}">
+                <view>10、咨询电话: 0573 - 86115603</view>
+                <view>海盐县妇幼保健院门诊部2017-8-5</view>
+            </block>
+            <block wx:if="{{hos == 4}}">
+                <view>10、咨询电话: 4008783344</view>
+                <view>海盐县口腔医院</view>
+            </block>
+            <block wx:if="{{hos == 5}}">
+                <view>10、咨询电话: 0573-86158338</view>
+                <view>海盐县康复护理院</view>
+            </block>
+            <block wx:if="{{hos == 6}}">
+                <view>11、咨询电话：</view>
+                <view>计划免疫办公室:0573-86115304(工作日)</view>
+                <view>儿童保健门诊:0573-86118200(工作日)</view>
+                <view>12、监督电话：0573-86118887</view>
+                <view>海盐县人民医院医疗卫生集团武原分院</view>
+            </block>
+        </view>
+        <image class="appoint_know_bottom" src="{{img_url}}appoint_know_bottom.png" mode="widthFix"></image>
+    </view>
+    <view class="confirm_wrap">
+        <button type="button" class="confirm" bindtap="confirm">确定</button>
+    </view>
+</view>

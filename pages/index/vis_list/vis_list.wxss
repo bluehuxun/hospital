@@ -1,0 +1,62 @@
+page{
+    background:#f2f2f2;
+    line-height: 60rpx;
+}
+.list>view{
+    background: #fff;
+    margin: 0 0 20rpx 0;
+}
+.list>view>view{
+    padding: 0 20rpx;
+}
+.month_wrap{
+    position: relative;
+}
+.list>view>view:nth-child(1){
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.list .month_text{
+    width:60rpx;
+    position:absolute;
+    top:-20px;
+    left:0;
+    color:#fff;
+    font-size:26rpx;
+    text-align:center;
+    bottom:0;
+    height:20px;
+}
+.status_icon{
+    width:30rpx;
+    height: 30rpx!important;
+}
+.month{
+    width: 60rpx;
+}
+.datetime_wrap{
+    padding: 0 0 0 20rpx;
+}
+.half{
+    width: 50%;
+}
+.btn-cencle {
+  width: 205rpx;
+  height: 55rpx;
+  font-size: 35rpx;
+  line-height: 55rpx;
+  float: right;
+  right: 20rpx;
+  background-color: #fff;
+  border: 1px solid rgba(255, 91, 91, 1);
+  margin:15rpx 0;
+  color: rgba(255, 91, 91, 1);
+}
+.clearfix:after {
+  content: ".";
+  display: block;
+  height: 0;
+  clear: both;
+  visibility: hidden;
+}

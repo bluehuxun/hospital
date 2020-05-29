@@ -1,0 +1,8 @@
+<view>
+    工号:
+    <input type="text" data-name="userkey" value="{{userkey}}" bindinput="get_val" placeholder="请输入工号"/>
+</view>
+<view>
+    姓名:
+    <input type="text" data-name="user_name" value="{{user_name}}" bindinput="get_val" placeholder="请输入姓名"/>
+</view>

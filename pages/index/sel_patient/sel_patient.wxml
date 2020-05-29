@@ -1,0 +1,24 @@
+<view class="container">
+    <view class="tip">{{tip}}</view>
+    <view class="touch-item {{item.isTouchMove ? 'touch-move-active' : ''}}" data-index="{{index}}" wx:for="{{list}}" data-idcard="{{item.idcard}}" data-idcardReal="{{item.idcardReal}}"  data-patname="{{item.patname}}" bindtap='nav'>
+  <view class='member content'>
+    <view class='member_info'>
+      <view class="">
+          <view class="patname">{{item.patname}}</view>
+          <view>{{item.sex1}}</view>
+      </view>
+      <view>年龄 {{item.age}}</view>
+      <view>身份证 {{item.idcardReal}}</view>
+    </view>
+  </view> 
+  <view class="del" catchtap="delete_member" data-empi="{{item.empi}}">删除</view>
+ </view>
+</view>
+
+<navigator url="../add_member/add_member" hover-class="none" class="no_list_data" wx:if="{{list.length == 0}}">
+    <view class="text-center">
+        <image src="{{img_url}}no_content.png" class="no_content"></image>
+    </view>
+    <view class="" >添加就诊人后方可查询</view>
+</navigator>
+

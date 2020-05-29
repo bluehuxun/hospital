@@ -1,0 +1,48 @@
+<view class='confirm_regist'>
+  <view class='confirm_regist_item flex'>
+    <view class='margin_confirm_regist_item'>
+      <view>挂号类型</view>
+      <view class='right'>预约挂号</view>   
+    </view> 
+  </view>
+  <view class='confirm_regist_item flex'>
+    <view class='margin_confirm_regist_item'>
+      <view>就诊科室</view>
+      <view class='right'>(门)心血管内科</view> 
+    </view>    
+  </view>
+  <view class='confirm_regist_item flex'>
+    <view class='margin_confirm_regist_item'>
+      <view>医生姓名</view>
+      <view class='right'>沈金龙</view>
+    </view>    
+  </view>
+  <view class='regist_time confirm_regist_item flex'>
+    <view class='margin_confirm_regist_item no_border'>  
+      <view>就诊时间</view>
+      <view class='right'>2018-07-28 14:40-14:45</view>    
+    </view>
+  </view>
+  <view class='regist_cost confirm_regist_item flex'>
+    <view>挂号费用</view>
+    <view class='red right'>20.00元</view>    
+  </view>
+  <view class='confirm_regist_item flex'>
+    <view>就诊人</view>
+    <view class='flex right'>
+      <picker bindchange="patient_change" value="{{patient_index}}" range="{{patient_array}}">
+        <view class="picker">
+          {{patient_array[patient_index]}}
+        </view>
+      </picker>
+      <image src='{{img_url}}subject_sel.png' class='patient' mode='widthFix'></image>
+    </view>
+  </view>
+</view>
+<view>
+  <view class='tip_title'>温馨提示：</view>
+  <view class='tip_con'>线上预约挂号时不用支付挂号费用，挂号费用统一线下就诊时支付。</view>
+  <view>
+    <button class='confirm_regist_btn' bindtap='confirm_regist'>确认挂号</button>
+  </view>
+</view>

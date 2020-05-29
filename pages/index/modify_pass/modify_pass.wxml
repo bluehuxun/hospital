@@ -1,0 +1,23 @@
+<view>
+  <view class='tip'>密码请设置8-20位数字（数字+字母）</view>
+  <view class='inputs'>
+    <view class='flex'>
+      <text class='input_left'>当前密码</text>
+      <input password='true' placeholder='请输入当前登录密码' bindinput='now_pass' value='{{now_pass}}'></input>
+    </view>
+    <view class='flex'>
+      <text class='input_left'>新的密码</text>
+      <input password='true' placeholder='请输入新的登录密码' bindinput='new_pass' value='{{new_pass}}'></input>
+    </view>
+    <view class='flex'>
+      <text class='input_left'>确认密码</text>
+      <input password='true' placeholder='请再次输入密码' bindinput='confirm_new_pass' value='{{confirm_new_pass}}'></input>
+    </view>
+  </view>
+  <view>
+    <button class='confirm' bindtap='confirm'>确认</button>
+  </view>
+  <view class='text-right' style='display:none;'>
+    <navigator class='forget_pass'>忘记当前密码</navigator>
+  </view>
+</view>

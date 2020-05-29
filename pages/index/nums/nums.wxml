@@ -1,0 +1,16 @@
+<view class="list">
+    <view wx:for="{{list}}" class="flex" bindtap="to_detail" data-medino="{{item.medino}}" data-resno="{{item.resno}}" data-schid="{{item.schid}}" data-regtime="{{item.regtime}}">
+        <!--<view>medino:{{item.medino}}</view>-->
+        <!--<view>medino:{{item.medino == undefined}}</view>-->
+        <view>
+            <view>{{regdate}} </view>
+            <view wx:if="{{item.regtime != undefined}}">{{item.regtime}}</view>
+            <view wx:else>空_空</view>
+        </view>
+        <view class="time">
+            <text wx:if="{{item.schtime == 1}}">上午</text>
+            <text wx:else>下午</text>
+        </view>
+        <view class="border">{{item.resno}}号</view>
+    </view>
+</view>

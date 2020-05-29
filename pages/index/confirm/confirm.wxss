@@ -1,0 +1,42 @@
+.header{
+    border-bottom:1px dashed #f2f2f2;
+    padding: 0 0 0 20rpx;
+    line-height: 80rpx;
+}
+.list>view>view:nth-child(1){
+    max-width: 200rpx;
+    color:#949494;
+}
+.list>view{
+    border-bottom:2rpx solid #f2f2f2;
+    line-height: 80rpx;
+    padding: 0 0 0 20rpx;
+}
+.doc{
+    font-size:28rpx;
+    padding: 0 0 0 20rpx;
+}
+.footer{
+    line-height: 80rpx;
+    padding: 0 0 0 20rpx;
+}
+.save{
+    width:calc(100% - 40rpx);
+    border-radius: 10rpx;
+    margin:0 0 0 20rpx;
+    background: #1ABB85;
+    color:#fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    line-height:80rpx;
+}
+.nav{
+    margin: 0 10rpx 0 0;
+}
+.flex{
+    justify-content: space-between;
+}
+.regdate{
+    padding: 0 20rpx 0 0;
+}

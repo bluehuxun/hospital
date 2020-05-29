@@ -1,0 +1,57 @@
+<view class="inform">
+    <image src="../../../img/inform.png" alt="" class="icon"/>
+    通知：从即日起，第7天号源放号时间将由现在的凌晨0点改为上午8点。即上午8点后，才能预约第7天的号。
+</view>
+<view class="header">
+    <view data-index='{{index}}' data-date='{{index}}' data-regtime="{{item.day.date}}" class="header_view {{active_date == index ? 'active' : ''}}" wx:for="{{days}}" bindtap='change_date'>
+        <view>{{item.day.tDate}}</view>
+        <view wx:if="{{item.day.week == 0}}">周日</view>
+        <view wx:if="{{item.day.week == 1}}">周一</view>
+        <view wx:if="{{item.day.week == 2}}">周二</view>
+        <view wx:if="{{item.day.week == 3}}">周三</view>
+        <view wx:if="{{item.day.week == 4}}">周四</view>
+        <view wx:if="{{item.day.week == 5}}">周五</view>
+        <view wx:if="{{item.day.week == 6}}">周六</view>
+    </view>
+</view>
+<view class='subjects'>
+    <view>
+        <view>
+            <text>普通号</text>
+        </view>
+        <view class="num_info clearfix">
+            <view class="{{item.schtime == 1 ? 'pull-left' : 'pull-right'}} " wx:for="{{list2}}" bindtap="to_list" data-deptid="{{item.deptid}}" data-schtime="{{item.schtime}}" data-medino="{{item.medino}}" data-departname="{{item.departname}}">
+                <view class="pull-left" wx:if="{{item.schtime == 1}}">
+                    <text>上午</text>
+                    <text class="big">{{item.resourcenum}}</text>
+                    <text class="small">余</text>
+                </view>
+                <view class="pull-right" wx:else>
+                    <text>下午</text>
+                    <text class="big">{{item.resourcenum}}</text>
+                    <text class="small">余</text>
+                </view>
+            </view>
+        </view>
+    </view>
+    <view wx:for="{{list3}}" bindtap="to_list" data-deptid="{{item.deptid}}" data-schtime="{{item.schtime}}" data-medino="{{item.medino}}" data-departname="{{item.departname}}">
+        <view>
+            <text>{{item.medname}}</text>
+        </view>
+        <view class="num_info clearfix">
+            <!-- <view class="{{item.schtime == 1 ? 'pull-left' : 'pull-right'}}"> -->
+            <view class="pull-left">
+                <view class="pull-left" wx:if="{{item.schtime == 1}}">
+                    <text>上午</text>
+                    <text class="big">{{item.resourcenum}}</text>
+                    <text class="small">余</text>
+                </view>
+                <view class="pull-right" wx:else>
+                    <text>下午</text>
+                    <text class="big">{{item.resourcenum}}</text>
+                    <text class="small">余</text>
+                </view>
+            </view>
+        </view>
+    </view>
+</view>

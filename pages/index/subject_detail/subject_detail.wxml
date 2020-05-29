@@ -1,0 +1,6 @@
+<view class='text-center'>
+    <view>
+        <image src='{{img_url}}no_content.png' class='no_content'></image>
+    </view>
+    <view class='no_content_text'>暂无内容</view>
+</view>

@@ -1,0 +1,59 @@
+<view class="page_list" wx:if="{{list.length > 0}}">
+    <!--<view>-->
+        <!--<view class="clearfix">-->
+            <!--<view class="pull-left">项目名称：</view>-->
+            <!--<view class="pull-left">{{jybgmc}}</view>-->
+        <!--</view>-->
+        <!--<view class="clearfix">-->
+            <!--<view class="pull-left">患者姓名：</view>-->
+            <!--&lt;!&ndash;上线前要改成前面选择的人&ndash;&gt;-->
+            <!--<view class="pull-left">{{patname}}</view>-->
+        <!--</view>-->
+        <!--<view class="clearfix">-->
+            <!--<view class="pull-left">就诊科室：</view>-->
+            <!--<view class="pull-left">{{jgmc}}</view>-->
+        <!--</view>-->
+        <!--<view class="clearfix">-->
+            <!--<view class="pull-left">医生：</view>-->
+            <!--<view class="pull-left">{{jcr}}</view>-->
+        <!--</view>-->
+        <!--<view class="clearfix">-->
+            <!--<view class="pull-left">报告时间：</view>-->
+            <!--<view class="pull-left">{{assaydate}}</view>-->
+        <!--</view>-->
+    <!--</view>-->
+
+    <view class="list" wx:if="{{reporttype == 1}}">
+        <view class="clearfix">
+            <view class="pull-left">项目名称</view>
+            <view class="pull-left">结果</view>
+            <view class="pull-left">参考范围</view>
+        </view>
+        <view class="clearfix" wx:for="{{list}}">
+            <view class="pull-left">{{list[index].jyxmmc}}</view>
+            <view class="pull-left">
+                <view>{{list[index].jyjg}}</view>
+                <view wx:if="{{list[index].jldw}}">{{list[index].jldw}}</view>
+            </view>
+            <view class="pull-left" wx:if="{{list[index].ckfw == null}}">暂无</view>
+            <view class="pull-left" wx:else>{{list[index].ckfw}}</view>
+        </view>
+
+    </view>
+    <view class="list" wx:else>
+        <view class="clearfix">
+            <view class="pull-left" style="width:40%;">项目名称</view>
+            <view class="pull-left" style="width:60%;">结果</view>
+        </view>
+        <view class="clearfix" wx:for="{{list}}">
+            <view class="pull-left" style="width:40%;">{{list[index].jcxmmc}}</view>
+            <view class="pull-left" style="width:60%;">
+                <view>{{list[index].bckgsj}}</view>
+            </view>
+            <!--<view class="pull-left" wx:if="{{list[index].ckfw == null}}">暂无</view>-->
+            <!--<view class="pull-left" wx:else>{{list[index].ckfw}}</view>-->
+        </view>
+
+    </view>
+</view>
+<view class="no_list_data text-center">{{ReturnInfo}}</view>

@@ -1,0 +1,689 @@
+<block wx:if="{{list == ''}}">
+    <view class="no_list_data">
+        <view class="text-center">
+            <image src="{{img_url}}no_content.png" class="no_content"></image>
+        </view>
+        <view>{{errorMsg}}</view>
+    </view>
+</block>
+<block wx:else>
+    <view class="serve_header_wrap">
+        <view class="serve_header">随访记录详情</view>
+    </view>
+    <block wx:if="{{sick == 1}}">
+        <view class="list">
+            <view class="clearfix">
+                <view class="pull-left">身高：</view>
+                <view class="pull-right">{{list.sg}}cm</view>
+            </view>
+            <view class="clearfix">
+                <view class="pull-left">体重：</view>
+                <view class="pull-right">{{list.tz}}kg</view>
+            </view>
+            <view class="clearfix">
+                <view class="pull-left">心率：</view>
+                <view class="pull-right">{{list.xl}}次/分</view>
+            </view>
+            <view class="clearfix">
+                <view class="pull-left">BMI：</view>
+                <view class="pull-right">{{list.bmi}}Kg/㎡</view>
+            </view>
+            <view class="clearfix">
+                <view class="pull-left">腰围：</view>
+                <view class="pull-right">{{list.yw}}cm</view>
+            </view>
+            <view class="clearfix">
+                <view class="pull-left">舒张压：</view>
+                <view class="pull-right">{{list.szy}}mmHg</view>
+            </view>
+            <view class="clearfix">
+                <view class="pull-left">收缩压：</view>
+                <view class="pull-right">{{list.ssy}}mmHg</view>
+            </view>
+            <view class="clearfix">
+                <view class="pull-left">其他体征：</view>
+                <view class="pull-right">{{list.qttz}}</view>
+            </view>
+            <view class="clearfix">
+                <view class="pull-left">健康指导：</view>
+                <view class="pull-right">{{list.jkzd}}</view>
+            </view>
+            <view class="clearfix">
+                <view class="pull-left">建议饮酒天数：</view>
+                <view class="pull-right">{{list.jyyjts}}天/周</view>
+            </view>
+            <view class="clearfix">
+                <view class="pull-left">建议运动方式：</view>
+                <view class="pull-right">{{list.jyydfs}}</view>
+            </view>
+            <view class="clearfix">
+                <view class="pull-left">建议运动次数：</view>
+                <view class="pull-right">{{list.jyydcs}}次/周</view>
+            </view>
+            <view class="clearfix">
+                <view class="pull-left">建议运动时间：</view>
+                <view class="pull-right">{{list.jyydsj}}分钟/次</view>
+            </view>
+            <view class="clearfix">
+                <view class="pull-left">主要运动方式：</view>
+                <view class="pull-right">{{list.zyydfs}}</view>
+            </view>
+            <view class="clearfix">
+                <view class="pull-left">血糖情况：</view>
+                <view class="pull-right">{{list.hbzt}}</view>
+            </view>
+        </view>
+    </block>
+    <block wx:elif="{{sick == 2}}">
+        <view class="list">
+            <view class="clearfix">
+                <view class="pull-left">身高：</view>
+                <view class="pull-right">{{list.sg}}cm</view>
+            </view>
+            <view class="clearfix">
+                <view class="pull-left">体重：</view>
+                <view class="pull-right">{{list.tz}}kg</view>
+            </view>
+            <!--<view class="clearfix">-->
+                <!--<view class="pull-left">心率：</view>-->
+                <!--<view class="pull-right">{{list.xl}}</view>-->
+            <!--</view>-->
+            <view class="clearfix">
+                <view class="pull-left">BMI：</view>
+                <view class="pull-right">{{list.bmi}}Kg/㎡</view>
+            </view>
+            <view class="clearfix">
+                <view class="pull-left">腰围：</view>
+                <view class="pull-right">{{list.yw}}cm</view>
+            </view>
+            <view class="clearfix">
+                <view class="pull-left">缩张压：</view>
+                <view class="pull-right">{{list.szy}}mmHg</view>
+            </view>
+            <view class="clearfix">
+                <view class="pull-left">患者一般情况：</view>
+                <view class="pull-right">
+                    <block wx:if="{{list.ybqk == 0}}">无</block>
+                    <block wx:elif="{{list.ybqk == 1}}">多次</block>
+                    <block wx:elif="{{list.ybqk == 2}}">多食</block>
+                    <block wx:elif="{{list.ybqk == 3}}">多尿</block>
+                    <block wx:elif="{{list.ybqk == 6}}">视力模糊</block>
+                    <block wx:elif="{{list.ybqk == 16}}">皮肤瘙痒</block>
+                    <block wx:elif="{{list.ybqk == 13}}">感染</block>
+                    <block wx:elif="{{list.ybqk == 7}}">手脚麻木</block>
+                    <block wx:elif="{{list.ybqk == 14}}">下肢浮肿</block>
+                    <block wx:elif="{{list.ybqk == 15}}">体重明显下降</block>
+                    <block wx:elif="{{list.ybqk == 11}}">其他</block>
+                </view>
+            </view>
+            <view class="clearfix">
+                <view class="pull-left">其他体征：</view>
+                <view class="pull-right">{{list.qttz}}</view>
+            </view>
+            <view class="clearfix">
+                <view class="pull-left">健康指导：</view>
+                <view class="pull-right">{{list.jkzd}}</view>
+            </view>
+            <view class="clearfix">
+                <view class="pull-left">运动情况：</view>
+                <view class="pull-right">
+                    <block wx:if="{{list.ydqk == 1}}">规律</block>
+                    <block wx:elif="{{list.ydqk == 2}}">偶尔</block>
+                    <block wx:elif="{{list.ydqk == 3}}">不锻炼</block>
+                </view>
+            </view>
+            <view class="clearfix">
+                <view class="pull-left">药物不良反应：</view>
+                <view class="pull-right">
+                    <block wx:if="{{list.ywblfy == 1}}">有</block>
+                    <block wx:elif="{{list.ywblfy == 0}}">无</block>
+                </view>
+            </view>
+            <view class="clearfix">
+                <view class="pull-left">饮食建议：</view>
+                <view class="pull-right">{{list.ysjy}}</view>
+            </view>
+            <view class="clearfix">
+                <view class="pull-left">饮食建议主食类：</view>
+                <view class="pull-right">{{list.jyzsl}}克/天</view>
+            </view>
+            <view class="clearfix">
+                <view class="pull-left">饮食建议蔬菜类：</view>
+                <view class="pull-right">{{list.jyscl}}克/天</view>
+            </view>
+
+            <view class="clearfix">
+                <view class="pull-left">饮食建议禽鱼肉蛋类：</view>
+                <view class="pull-right">{{list.jyqyrdl}}克/天</view>
+            </view>
+            <view class="clearfix">
+                <view class="pull-left">饮食建议乳制品类：</view>
+                <view class="pull-right">{{list.jyrzpl}}克/天</view>
+            </view>
+            <view class="clearfix">
+                <view class="pull-left">饮食建议蔬菜类：</view>
+                <view class="pull-right">{{list.jyscl}}克/天</view>
+            </view>
+            <view class="clearfix">
+                <view class="pull-left">饮食建议食用油：</view>
+                <view class="pull-right">{{list.jysyy}}克/天</view>
+            </view>
+            <view class="clearfix">
+                <view class="pull-left">饮食建议豆制品类：</view>
+                <view class="pull-right">{{list.jydzpl}}克/天</view>
+            </view>
+            <view class="clearfix">
+                <view class="pull-left">饮食建议蔬菜类：</view>
+                <view class="pull-right">{{list.jyscl}}克/天</view>
+            </view>
+            <view class="clearfix">
+                <view class="pull-left">饮食建议水果类：</view>
+                <view class="pull-right">{{list.jysgl}}克/天</view>
+            </view>
+            <view class="clearfix">
+                <view class="pull-left">饮食建议膳食总热量：</view>
+                <view class="pull-right">{{list.jysszrl}}千卡/天</view>
+            </view>
+            <view class="clearfix">
+                <view class="pull-left">饮食建议盐摄入量：</view>
+                <view class="pull-right">{{list.jyysrl}}克/天</view>
+            </view>
+
+            <view class="clearfix">
+                <view class="pull-left">管理级别：</view>
+                <view class="pull-right">
+                    <block wx:if="{{list.fcgljg == 1}}">常规管理</block>
+                    <block wx:elif="{{list.fcgljg == 2}}">强化管理</block>
+                    <block wx:elif="{{list.fcgljg == 9}}">未评估</block>
+                </view>
+            </view>
+            <view class="clearfix">
+                <view class="pull-left">糖尿病足部检查：</view>
+                <view class="pull-right">{{list.tnbzbjc}}</view>
+            </view>
+
+        </view>
+    </block>
+    <block wx:elif="{{sick == 3}}">
+        <view class="list">
+            <view class="clearfix">
+                <view class="pull-left">身高：</view>
+                <view class="pull-right">{{list.sg}}cm</view>
+            </view>
+            <view class="clearfix">
+                <view class="pull-left">体重：</view>
+                <view class="pull-right">{{list.tz}}kg</view>
+            </view>
+            <view class="clearfix">
+                <view class="pull-left">腰围：</view>
+                <view class="pull-right">{{list.yw}}cm</view>
+            </view>
+            <view class="clearfix">
+                <view class="pull-left">收缩压：</view>
+                <view class="pull-right">{{list.ssy}}mmHg</view>
+            </view>
+            <view class="clearfix">
+                <view class="pull-left">缩张压：</view>
+                <view class="pull-right">{{list.szy}}mmHg</view>
+            </view>
+
+            <view class="clearfix">
+                <view class="pull-left">随访日期：</view>
+                <view class="pull-right">{{list.sfrq}}</view>
+            </view>
+            <view class="clearfix">
+                <view class="pull-left">随访医生姓名：</view>
+                <view class="pull-right">{{list.sfysxm}}</view>
+            </view>
+            <view class="clearfix">
+                <view class="pull-left">随访方式：</view>
+                <view class="pull-right">
+                    <block wx:if="{{list.sffs == 1}}">电话随访</block>
+                    <block wx:elif="{{list.sffs == 2}}">家庭随访</block>
+                    <block wx:elif="{{list.sffs == 3}}">门诊随访</block>
+                </view>
+            </view>
+            <view class="clearfix">
+                <view class="pull-left">录入人姓名：</view>
+                <view class="pull-right">{{list.lrrxm}}</view>
+            </view>
+            <view class="clearfix">
+                <view class="pull-left">录入日期：</view>
+                <view class="pull-right">{{list.lrrq}}</view>
+            </view>
+            <view class="clearfix">
+                <view class="pull-left">修改人姓名：</view>
+                <view class="pull-right">{{list.xgrxm}}</view>
+            </view>
+            <view class="clearfix">
+                <view class="pull-left">修改日期：</view>
+                <view class="pull-right">{{list.xgrq}}</view>
+            </view>
+            <view class="clearfix">
+                <view class="pull-left">危险级别：</view>
+                <view class="pull-right">
+                    <block wx:if="{{list.wxjb == 1}}">低危险组</block>
+                    <block wx:elif="{{list.wxjb == 1}}">中危险组</block>
+                    <block wx:elif="{{list.wxjb == 1}}">高危险组</block>
+                </view>
+            </view>
+
+        </view>
+    </block>
+    <block wx:elif="{{sick == 4}}">
+        <view class="list">
+            <view class="clearfix">
+                <view class="pull-left">身高：</view>
+                <view class="pull-right">{{list.sg}}cm</view>
+            </view>
+            <view class="clearfix">
+                <view class="pull-left">体重：</view>
+                <view class="pull-right">{{list.tz}}kg</view>
+            </view>
+            <view class="clearfix">
+                <view class="pull-left">BMI：</view>
+                <view class="pull-right">{{list.bmiz}}Kg/㎡</view>
+            </view>
+            <view class="clearfix">
+                <view class="pull-left">缩张压：</view>
+                <view class="pull-right">{{list.szy}}mmHg</view>
+            </view>
+
+            <view class="clearfix">
+                <view class="pull-left">收缩压：</view>
+                <view class="pull-right">{{list.ssy}}mmHg</view>
+            </view>
+            <view class="clearfix">
+                <view class="pull-left">主要症状：</view>
+                <view class="pull-right">
+                    <block wx:if="{{list.zyzz == 0}}">无</block>
+                    <block wx:elif="{{list.zyzz == 18}}">发热</block>
+                    <block wx:elif="{{list.zyzz == 19}}">猝然昏扑</block>
+                    <block wx:elif="{{list.zyzz == 20}}">不省人事</block>
+                    <block wx:elif="{{list.zyzz == 21}}">突发口眼歪斜</block>
+                    <block wx:elif="{{list.zyzz == 22}}">半身不遂</block>
+                    <block wx:elif="{{list.zyzz == 23}}">舌强言蹇</block>
+                    <block wx:elif="{{list.zyzz == 24}}">智力障碍</block>
+                </view>
+            </view>
+            <view class="clearfix">
+                <view class="pull-left">随访方式：</view>
+                <view class="pull-right">
+                    <block wx:if="{{list.sffs == 1}}">电话随访</block>
+                    <block wx:elif="{{list.sffs == 2}}">家庭随访</block>
+                    <block wx:elif="{{list.sffs == 3}}">门诊随访</block>
+                </view>
+            </view>
+            <view class="clearfix">
+                <view class="pull-left">随访医生：</view>
+                <view class="pull-right">{{list.sfysxm}}</view>
+            </view>
+            <view class="clearfix">
+                <view class="pull-left">健康指导：</view>
+                <view class="pull-right">{{list.jkzd}}</view>
+            </view>
+        </view>
+    </block>
+    <block wx:elif="{{sick == 5}}">
+        <view class="list">
+            <view class="clearfix">
+                <view class="pull-left">有无治疗：</view>
+                <view class="pull-right">
+                    <block wx:if="{{list.ywzl == 1}}">有</block>
+                    <block wx:elif="{{list.ywzl == 0}}">无</block>
+                    <block wx:elif="{{list.ywzl == 9}}">不详</block>
+                </view>
+            </view>
+            <view class="clearfix">
+                <view class="pull-left">治疗情况：</view>
+                <view class="pull-right">
+                    <block wx:if="{{list.zlqk == 1}}">手术</block>
+                    <block wx:elif="{{list.zlqk == 2}}">化疗</block>
+                    <block wx:elif="{{list.zlqk == 3}}">放疗</block>
+                    <block wx:elif="{{list.zlqk == 4}}">中药</block>
+                    <block wx:elif="{{list.zlqk == 5}}">免疫</block>
+                    <block wx:elif="{{list.zlqk == 6}}">介入</block>
+                    <block wx:elif="{{list.zlqk == 7}}">对症治疗</block>
+                    <block wx:elif="{{list.zlqk == 8}}">止痛治疗</block>
+                    <block wx:elif="{{list.zlqk == 9}}">其它治疗</block>
+                    <block wx:else>暂无数据</block>
+                </view>
+            </view>
+            <view class="clearfix">
+                <view class="pull-left">健康指导：</view>
+                <view class="pull-right">
+                    {{list.jkzd}}
+                </view>
+            </view>
+            <view class="clearfix">
+                <view class="pull-left">目前情况：</view>
+                <view class="pull-right">
+                    <block wx:if="{{list.mqqk == 1}}">稳定</block>
+                    <block wx:elif="{{list.mqqk == 2}}">好转</block>
+                    <block wx:elif="{{list.mqqk == 3}}">恶化</block>
+                    <block wx:elif="{{list.mqqk == 4}}">死亡</block>
+                </view>
+            </view>
+
+            <view class="clearfix">
+                <view class="pull-left">指导内容：</view>
+                <view class="pull-right">
+                    <block wx:if="{{list.zdnr == 1}}">督导随访</block>
+                    <block wx:elif="{{list.zdnr == 2}}">用药</block>
+                    <block wx:elif="{{list.zdnr == 3}}">饮食</block>
+                    <block wx:elif="{{list.zdnr == 4}}">康复</block>
+                    <block wx:elif="{{list.zdnr == 5}}">家庭病床</block>
+                    <block wx:elif="{{list.zdnr == 6}}">住院</block>
+                    <block wx:elif="{{list.zdnr == 7}}">出诊</block>
+                </view>
+            </view>
+            <view class="clearfix">
+                <view class="pull-left">随访情况：</view>
+                <view class="pull-right">
+                    <block wx:if="{{list.sfqk == 1}}">住院</block>
+                    <block wx:elif="{{list.sfqk == 2}}">在家治疗</block>
+                    <block wx:elif="{{list.sfqk == 3}}">死亡</block>
+                    <block wx:elif="{{list.sfqk == 4}}">失访</block>
+                    <block wx:elif="{{list.sfqk == 5}}">不治疗</block>
+                </view>
+            </view>
+        </view>
+    </block>
+    <block wx:elif="{{sick == 8}}">
+        <view class="list">
+            <view class='margin_confirm_regist_item clearfix'>
+                            <view class="pull-left">记录标识</view>
+                            <view class='pull-right right'>{{list.id}}</view>
+                   </view>
+                   <view class='margin_confirm_regist_item clearfix'>
+                            <view class="pull-left">原档案编号</view>
+                            <view class='pull-right right'>{{list.grid}}</view>
+                  </view> 
+                  <view class='margin_confirm_regist_item clearfix'>
+                            <view class="pull-left">记录来源</view>
+                            <view class='pull-right right'>
+                                <block wx:if="{{list.zdyj == 1}}">来自于体检</block>
+                                <block wx:elif="{{list.zdyj == 2}}">来自于老人保健</block>
+                                <block wx:elif="{{list.zdyj == 3}}">来自于中医体质辨识</block>
+                                <block wx:elif="{{list.zdyj == 4}}">来自于高血压</block>
+                                <block wx:elif="{{list.zdyj == 4}}">来自于糖尿病</block>                        
+                            </view>
+                  </view>
+                  
+                  <view class='margin_confirm_regist_item clearfix'>
+                            <view class="pull-left">姓名</view>
+                            <view class='pull-right right'>{{list.xm}}</view>
+                  </view> 
+                  <view class='margin_confirm_regist_item clearfix'>
+                            <view class="pull-left">性别</view>
+                            <view class='pull-right right'>
+                            <block wx:if="{{list.xb == 1}}">男</block>
+                           <block wx:elif="{{list.xb == 0}}">女</block>
+                            </view>
+                  </view> 
+                  <view class='margin_confirm_regist_item clearfix'>
+                            <view class="pull-left">身份证号</view>
+                            <view class='pull-right right'>{{list.sfzh}}</view>
+                  </view> 
+                  <view class='margin_confirm_regist_item clearfix'>
+                            <view class="pull-left">出生日期</view>
+                            <view class='pull-right right'>{{list.csrq}}</view>
+                  </view>                 
+                  <view class='margin_confirm_regist_item clearfix'>
+                            <view class="pull-left">管理所在行政区划</view>
+                            <view class='pull-right right'>{{list.glszxzqh}}</view>
+                  </view>  
+                  <view class='margin_confirm_regist_item clearfix'>
+                            <view class="pull-left">机构编号</view>
+                            <view class='pull-right right'>{{list.jgbm}}</view>
+                  </view>  
+                  <view class='margin_confirm_regist_item clearfix'>
+                            <view class="pull-left">评估医生</view>
+                            <view class='pull-right right'>{{list.pgys}}</view>
+                  </view>  
+                  <view class='margin_confirm_regist_item clearfix'>
+                            <view class="pull-left">评估医生姓名</view>
+                            <view class='pull-right right'>{{list.pgysxm}}</view>
+                  </view>  
+                  <view class='margin_confirm_regist_item clearfix'>
+                            <view class="pull-left">评估日期</view>
+                            <view class='pull-right right'>{{list.pgrq}}</view>
+                  </view>  
+                  <view class='margin_confirm_regist_item clearfix'>
+                            <view class="pull-left">修改日期</view>
+                            <view class='pull-right right'>{{list.xgrq}}</view>
+                  </view>  
+                  <view class='margin_confirm_regist_item clearfix'>
+                            <view class="pull-left">修改人</view>
+                            <view class='pull-right right'>{{list.xgr}}</view>
+                  </view>  
+                  <view class='margin_confirm_regist_item clearfix'>
+                            <view class="pull-left">作废标志</view>
+                            <view class='pull-right right'>{{list.zfbz}}</view>
+                  </view>  
+                  <view class='margin_confirm_regist_item clearfix'>
+                            <view class="pull-left">专项id</view>
+                            <view class='pull-right right'>{{list.ssid}}</view>
+                  </view>  
+                  <view class='margin_confirm_regist_item clearfix'>
+                            <view class="pull-left">精力充沛</view>
+                            <view class='pull-right right'>{{list.jlcp}}</view>
+                  </view>  
+                  <view class='margin_confirm_regist_item clearfix'>
+                            <view class="pull-left">容易疲乏</view>
+                            <view class='pull-right right'>{{list.rypf}}</view>
+                  </view> 
+                  <view class='margin_confirm_regist_item clearfix'>
+                            <view class="pull-left">容易气短</view>
+                            <view class='pull-right right'>{{list.ryqd}}</view>
+                  </view> 
+                  <view class='margin_confirm_regist_item clearfix'>
+                            <view class="pull-left">说话无力</view>
+                            <view class='pull-right right'>{{list.shwl}}</view>
+                  </view> 
+                  <view class='margin_confirm_regist_item clearfix'>
+                            <view class="pull-left">心情不愉快</view>
+                            <view class='pull-right right'>{{list.xqbyk}}</view>
+                  </view> 
+                  <view class='margin_confirm_regist_item clearfix'>
+                            <view class="pull-left">遇事紧张</view>
+                            <view class='pull-right right'>{{list.ysjz}}</view>
+                  </view> 
+                  <view class='margin_confirm_regist_item clearfix'>
+                            <view class="pull-left">孤独失落</view>
+                            <view class='pull-right right'>{{list.gdsl}}</view>
+                  </view> 
+                  <view class='margin_confirm_regist_item clearfix'>
+                            <view class="pull-left">容易感到害怕</view>
+                            <view class='pull-right right'>{{list.rygdhp}}</view>
+                  </view> 
+                  <view class='margin_confirm_regist_item clearfix'>
+                            <view class="pull-left">身体超重</view>
+                            <view class='pull-right right'>{{list.stcz}}</view>
+                  </view> 
+                  <view class='margin_confirm_regist_item clearfix'>
+                            <view class="pull-left">眼睛干涩</view>
+                            <view class='pull-right right'>{{list.yjgs}}</view>
+                  </view> 
+                  <view class='margin_confirm_regist_item clearfix'>
+                            <view class="pull-left">手脚发凉</view>
+                            <view class='pull-right right'>{{list.sjfl}}</view>
+                  </view> 
+                  <view class='margin_confirm_regist_item clearfix'>
+                            <view class="pull-left">胃脘怕冷</view>
+                            <view class='pull-right right'>{{list.wwpl}}</view>
+                  </view>  
+                  <view class='margin_confirm_regist_item clearfix'>
+                            <view class="pull-left">不耐寒</view>
+                            <view class='pull-right right'>{{list.bnh}}</view>
+                  </view>  
+                  <view class='margin_confirm_regist_item clearfix'>
+                            <view class="pull-left">容易患感冒</view>
+                            <view class='pull-right right'>{{list.ryhgm}}</view>
+                  </view>  
+                  <view class='margin_confirm_regist_item clearfix'>
+                            <view class="pull-left">鼻塞流涕</view>
+                            <view class='pull-right right'>{{list.bslt}}</view>
+                  </view>  
+                  <view class='margin_confirm_regist_item clearfix'>
+                            <view class="pull-left">口粘口腻</view>
+                            <view class='pull-right right'>{{list.kzkn}}</view>
+                  </view>  
+                  <view class='margin_confirm_regist_item clearfix'>
+                            <view class="pull-left">容易过敏</view>
+                            <view class='pull-right right'>{{list.rygm}}</view>
+                  </view>  
+                  <view class='margin_confirm_regist_item clearfix'>
+                            <view class="pull-left">皮肤容易荨麻疹</view>
+                            <view class='pull-right right'>{{list.pfryxmz}}</view>
+                  </view>  
+                  <view class='margin_confirm_regist_item clearfix'>
+                            <view class="pull-left">青紫瘀斑</view>
+                            <view class='pull-right right'>{{list.qzyb}}</view>
+                  </view>  
+                  <view class='margin_confirm_regist_item clearfix'>
+                            <view class="pull-left">皮肤一抓就红</view>
+                            <view class='pull-right right'>{{list.pfyzjh}}</view>
+                  </view>  
+                  <view class='margin_confirm_regist_item clearfix'>
+                            <view class="pull-left">皮肤口唇干</view>
+                            <view class='pull-right right'>{{list.pfkcg}}</view>
+                  </view>  
+                  <view class='margin_confirm_regist_item clearfix'>
+                            <view class="pull-left">肢体麻木</view>
+                            <view class='pull-right right'>{{list.ztmm}}</view>
+                  </view>
+                  <view class='margin_confirm_regist_item clearfix'>
+                            <view class="pull-left">面部鼻部油腻</view>
+                            <view class='pull-right right'>{{list.mbbbyn}}</view>
+                  </view>
+                  <view class='margin_confirm_regist_item clearfix'>
+                            <view class="pull-left">面色晦暗</view>
+                            <view class='pull-right right'>{{list.msha}}</view>
+                  </view>
+                  <view class='margin_confirm_regist_item clearfix'>
+                            <view class="pull-left">皮肤湿疹</view>
+                            <view class='pull-right right'>{{list.pfsz}}</view>
+                  </view>
+                  <view class='margin_confirm_regist_item clearfix'>
+                            <view class="pull-left">口干咽燥</view>
+                            <view class='pull-right right'>{{list.kgyz}}</view>
+                  </view>
+                  <view class='margin_confirm_regist_item clearfix'>
+                            <view class="pull-left">口苦口臭</view>
+                            <view class='pull-right right'>{{list.kkkc}}</view>
+                  </view>
+                  <view class='margin_confirm_regist_item clearfix'>
+                            <view class="pull-left">腹部肥大</view>
+                            <view class='pull-right right'>{{list.fbfd}}</view>
+                  </view>
+                  <view class='margin_confirm_regist_item clearfix'>
+                            <view class="pull-left">不喜凉食</view>
+                            <view class='pull-right right'>{{list.bxls}}</view>
+                  </view>
+                  <view class='margin_confirm_regist_item clearfix'>
+                            <view class="pull-left">解不尽</view>
+                            <view class='pull-right right'>{{list.jbj}}</view>
+                  </view>
+                  <view class='margin_confirm_regist_item clearfix'>
+                            <view class="pull-left">大便干燥</view>
+                            <view class='pull-right right'>{{list.dbgz}}</view>
+                  </view>
+                  <view class='margin_confirm_regist_item clearfix'>
+                            <view class="pull-left">舌苔厚腻</view>
+                            <view class='pull-right right'>{{list.sthn}}</view>
+                  </view>
+                  <view class='margin_confirm_regist_item clearfix'>
+                            <view class="pull-left">舌下静脉淤紫</view>
+                            <view class='pull-right right'>{{list.sxjmyz}}</view>
+                  </view>
+                  <view class='margin_confirm_regist_item clearfix'>
+                            <view class="pull-left">气虚质评分</view>
+                            <view class='pull-right right'>{{list.qixuzhi}}</view>
+                  </view>
+                  <view class='margin_confirm_regist_item clearfix'>
+                            <view class="pull-left">阳虚质评分</view>
+                            <view class='pull-right right'>{{list.yangxuzhi}}</view>
+                  </view>  
+                  <view class='margin_confirm_regist_item clearfix'>
+                            <view class="pull-left">阴虚质评分</view>
+                            <view class='pull-right right'>{{list.yinxuzhi}}</view>
+                  </view>
+                  <view class='margin_confirm_regist_item clearfix'>
+                            <view class="pull-left">痰湿质评分</view>
+                            <view class='pull-right right'>{{list.tanshizhi}}</view>
+                  </view>
+                  <view class='margin_confirm_regist_item clearfix'>
+                            <view class="pull-left">湿热质评分</view>
+                            <view class='pull-right right'>{{list.shirezhi}}</view>
+                  </view>
+                  <view class='margin_confirm_regist_item clearfix'>
+                            <view class="pull-left">血瘀质评分</view>
+                            <view class='pull-right right'>{{list.xueyuzhi}}</view>
+                  </view>
+                  <view class='margin_confirm_regist_item clearfix'>
+                            <view class="pull-left">气郁质评分</view>
+                            <view class='pull-right right'>{{list.qiyuzhi}}</view>
+                  </view>
+                  <view class='margin_confirm_regist_item clearfix'>
+                            <view class="pull-left">特禀质评分</view>
+                            <view class='pull-right right'>{{list.tebingzhi}}</view>
+                  </view>
+                  <view class='margin_confirm_regist_item clearfix'>
+                            <view class="pull-left">平和质评分</view>
+                            <view class='pull-right right'>{{list.pinghezhi}}</view>
+                  </view>
+                  <view class='margin_confirm_regist_item clearfix'>
+                            <view class="pull-left">评估等级</view>
+                            <view class='pull-right right'>{{list.pgdj}}</view>
+                  </view>
+                  <view class='margin_confirm_regist_item clearfix'>
+                            <view class="pull-left">中医保健指导</view>
+                            <view class='pull-right right'>{{list.zybjzd}}</view>
+                  </view>
+                  <view class='margin_confirm_regist_item clearfix'>
+                            <view class="pull-left">其他中医保健指导</view>
+                            <view class='pull-right right'>{{list.qtzybjzd}}</view>
+                  </view>
+                   <view class='margin_confirm_regist_item clearfix'>
+                            <view class="pull-left">主要体质</view>
+                            <view class='pull-right right'>{{list.zytz}}</view>
+                  </view>
+                   <view class='margin_confirm_regist_item clearfix'>
+                            <view class="pull-left">倾向体质</view>
+                            <view class='pull-right right'>{{list.qxtz}}</view>
+                  </view>
+                   <view class='margin_confirm_regist_item clearfix'>
+                            <view class="pull-left">录入日期</view>
+                            <view class='pull-right right'>{{list.lrrq}}</view>
+                  </view>
+                   <view class='margin_confirm_regist_item clearfix'>
+                            <view class="pull-left">录入人</view>
+                            <view class='pull-right right'>{{list.lrr}}</view>
+                  </view>
+                   <view class='margin_confirm_regist_item clearfix'>
+                            <view class="pull-left">拼音码</view>
+                            <view class='pull-right right'>{{list.pym}}</view>
+                  </view>
+                   <view class='margin_confirm_regist_item clearfix'>
+                            <view class="pull-left">五笔码</view>
+                            <view class='pull-right right'>{{list.wbm}}</view>
+                  </view>
+                  <view class='margin_confirm_regist_item clearfix'>
+                            <view class="pull-left">表单完整度</view>
+                            <view class='pull-right right'>{{list.bdwzd}}</view>
+                  </view>
+                  <view class='margin_confirm_regist_item clearfix'>
+                            <view class="pull-left">管理所在行政区划名称</view>
+                            <view class='pull-right right'>{{list.glszxzqhmc}}</view>
+                  </view>
+                  <view class='margin_confirm_regist_item clearfix'>
+                            <view class="pull-left">体检模板名称</view>
+                            <view class='pull-right right'>{{list.tjmbmc}}</view>
+                  </view>
+                  
+        </view>
+    </block>
+
+
+</block>

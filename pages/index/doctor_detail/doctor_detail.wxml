@@ -1,0 +1,29 @@
+<view>
+	<view class='header'>
+		<text class='name'>黄萍</text>
+		<text class='line'></text>
+		<text class='work'>主治医师</text>
+	</view>
+	<view class='doctor_intro'>
+		<view class='title'>
+		  <image class='icon' src='{{img_url}}intro.png' mode='widthFix'></image>
+		  医生介绍
+		</view>
+		<view class='doctor_info' style='display:{{doctor_info_display}}'>2005年参加工作，2005年参加工作，2005年参加工作，2005年参加工作，2005年参加工作，2005年参加工作，2005年参加工作，2005年参加工作，2005年参加工作，2005年参加工作，2005年参加工作，</view>
+		<view class='show_all_wrap clearfix'>
+			<view class='show_all pull-right' bindtap='show_all'>{{show_all_text}}</view>
+			<image src='{{img_url}}triangle.png' class='triangle pull-right'></image>
+		</view>
+	</view>
+	<view class='doctor_intro'>
+		<view class='title'>
+		  <image class='icon' src='{{img_url}}good_at.png' mode='widthFix'></image>
+		  擅长介绍
+		</view>
+		<view class='doctor_info' style='display:{{good_info_display}}'>2005年参加工作，2005年参加工作，2005年参加工作，2005年参加工作，2005年参加工作，2005年参加工作，2005年参加工作，2005年参加工作，2005年参加工作，2005年参加工作，2005年参加工作，</view>
+		<view class='show_all_wrap clearfix'>
+			<view class='show_all pull-right' bindtap='show_all_good'>{{show_all_good_text}}</view>
+			<image src='{{img_url}}triangle.png' class='triangle pull-right'></image>
+		</view>
+	</view>
+</view>

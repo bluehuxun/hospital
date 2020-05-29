@@ -1,0 +1,29 @@
+<view class='intro_type flex'>
+  <view class='{{intro_type == 0 ? "active" : ""}}' data-intro_type='0' bindtap='change_intro_type'>就医流程</view>
+  <view class='{{intro_type == 1 ? "active" : ""}}' data-intro_type='1' bindtap='change_intro_type'>挂号须知</view>
+</view>
+<view class='article'>
+  <block wx:if='{{intro_type == 0}}'>
+    <view class='intro'>
+      <view class='guide_title'>一、就医流程</view>
+      <view class='guide_con'>
+        <view>1、首次就诊病人首次就诊病人首次就诊病人首次就诊病人首次就诊病人首次就诊病人首次就诊病人首次就诊病人首次就诊病人首次就诊病人首次就诊病人</view>
+        <view>2、首次就诊病人首次就诊病人首次就诊病人首次就诊病人首次就诊病人首次就诊病人首次就诊病人首次就诊病人首次就诊病人首次就诊病人首次就诊病人</view>        
+        <view>2、首次就诊病人首次就诊病人首次就诊病人首次就诊病人首次就诊病人首次就诊病人首次就诊病人首次就诊病人首次就诊病人首次就诊病人首次就诊病人</view>        
+        <view>2、首次就诊病人首次就诊病人首次就诊病人首次就诊病人首次就诊病人首次就诊病人首次就诊病人首次就诊病人首次就诊病人首次就诊病人首次就诊病人</view>        
+        <view>2、首次就诊病人首次就诊病人首次就诊病人首次就诊病人首次就诊病人首次就诊病人首次就诊病人首次就诊病人首次就诊病人首次就诊病人首次就诊病人</view>        
+        <view>2、首次就诊病人首次就诊病人首次就诊病人首次就诊病人首次就诊病人首次就诊病人首次就诊病人首次就诊病人首次就诊病人首次就诊病人首次就诊病人</view>        
+        
+      </view>
+    </view>
+  </block>
+  <block wx:if='{{intro_type == 1}}'>
+    <view class='intro'>
+      <view class='guide_title'>二、挂号须知</view>
+      <view class='guide_con'>
+        <view>1、首次就诊病人首次就诊病人首次就诊病人首次就诊病人首次就诊病人首次就诊病人首次就诊病人首次就诊病人首次就诊病人首次就诊病人首次就诊病人</view>
+        <view>2、首次就诊病人首次就诊病人首次就诊病人首次就诊病人首次就诊病人首次就诊病人首次就诊病人首次就诊病人首次就诊病人首次就诊病人首次就诊病人</view>        
+      </view>
+    </view>
+  </block>
+</view>

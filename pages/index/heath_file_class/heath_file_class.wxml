@@ -1,0 +1,83 @@
+<view class="list">
+    <view class="list_item flex" data-sick="1" bindtap="to_diabete_file">
+        <image class="file_class_left" src="{{img_url}}child_file.png"></image>
+        <view class="file_class_right">
+            <view class="par_title">高血压档案</view>
+            <view class="sub_title">随时随地查看档案，让自己更了解自己</view>
+        </view>
+    </view>
+    <view class="list_item flex" data-sick="2" bindtap="to_diabete_file">
+        <image class="file_class_left" src="{{img_url}}woman_heath.png"></image>
+        <view class="file_class_right">
+            <view class="par_title">糖尿病档案</view>
+            <view class="sub_title">随时随地查看档案，让自己更了解自己</view>
+        </view>
+    </view>
+
+
+    <view class="list_item flex" data-sick="3" bindtap="to_diabete_file">
+        <image class="file_class_left" src="{{img_url}}coronary_heart_dis.png"></image>
+        <view class="file_class_right">
+            <view class="par_title">冠心病档案</view>
+            <view class="sub_title">随时随地查看档案，让自己更了解自己</view>
+        </view>
+    </view>
+    <view class="list_item flex" data-sick="4" bindtap="to_diabete_file">
+        <image class="file_class_left" src="{{img_url}}stroke.png"></image>
+        <view class="file_class_right">
+            <view class="par_title">脑卒中档案</view>
+            <view class="sub_title">随时随地查看档案，让自己更了解自己</view>
+        </view>
+    </view>
+    <view class="list_item flex" data-sick="5" bindtap="to_diabete_file">
+        <image class="file_class_left" src="{{img_url}}tumour.png"></image>
+        <view class="file_class_right">
+            <view class="par_title">肿瘤档案</view>
+            <view class="sub_title">随时随地查看档案，让自己更了解自己</view>
+        </view>
+    </view>
+    <view class="list_item flex" bindtap="to_diabete_file" hidden="true">
+        <image class="file_class_left" src="{{img_url}}slow_sick_file.png"></image>
+        <view class="file_class_right">
+            <view class="par_title">慢性病档案管理</view>
+            <view class="sub_title">慢病管理信息（高血压、糖尿病、肿瘤、血脂异常），重症精神病等病历管理信息。</view>
+        </view>
+    </view>
+    
+    <view class="list_item flex" data-sick="6" bindtap="to_eb_file" >
+        <image class="file_class_left" src="{{img_url}}slow_sick_file.png"></image>
+        <view class="file_class_right">
+            <view class="par_title">儿保专项档案</view>
+            <view class="sub_title">随时随地查看档案，让自己更了解自己</view>
+        </view>
+    </view>    
+    <view class="list_item flex" data-sick="7" bindtap="to_fb_file" >
+        <image class="file_class_left" src="{{img_url}}woman_heath.png"></image>
+        <view class="file_class_right">
+            <view class="par_title">妇保专项档案</view>
+            <view class="sub_title">随时随地查看档案，让自己更了解自己</view>
+        </view>
+    </view>    
+    <view class="list_item flex" data-sick="8" bindtap="to_zytzbs_file" >
+        <image class="file_class_left" src="{{img_url}}slow_sick_file.png"></image>
+        <view class="file_class_right">
+            <view class="par_title">中医体质辨识档案</view>
+            <view class="sub_title">随时随地查看档案，让自己更了解自己</view>
+        </view>
+    </view>
+    <view class="list_item flex" data-sick="9" bindtap="to_diabete_file" hidden="true">
+        <image class="file_class_left" src="{{img_url}}slow_sick_file.png"></image>
+        <view class="file_class_right">
+            <view class="par_title">预防接种档案</view>
+            <view class="sub_title">随时随地查看档案，让自己更了解自己</view>
+        </view>
+    </view>
+                   
+    <view class="list_item flex" bindtap="to_health_file">
+        <image class="file_class_left" src="{{img_url}}person_file.png"></image>
+        <view class="file_class_right">
+            <view class="par_title">个人健康档案</view>
+            <view class="sub_title">随时随地查看档案，让自己更了解自己</view>
+        </view>
+    </view>
+</view>

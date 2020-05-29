@@ -1,0 +1,28 @@
+<view class="tip">{{examname}}</view>
+<view class="exam_info">
+    <view>体检时间：{{bdate}}</view>
+    <view>总检时间：{{examdate}}</view>
+    <view>体检单位：{{hosname}}</view>
+</view>
+<view>
+    <view class="gray_bg">体检总结</view>
+    <view class="con">
+        <text wx:if="{{tjzj == null || tjzj == 'null'}}">暂无数据</text>
+        <text wx:else>{{tjzj}}</text>
+    </view>
+</view>
+<view>
+    <view class="gray_bg">总检建议</view>
+    <view class="con">{{jkjy}}</view>
+</view>
+<view>
+    <view class="report_detail_title">报告详情</view>
+    <view class="detail_list">
+        <view wx:if="{{item != null }}" wx:for="{{info_list}}" bindtap="get_detail" data-tjxmfl="{{item}}">
+            <view>
+                <text>{{item}}</text>
+                <image class="nav pull-right" mode="widthFix" src="{{img_url}}subject_sel.png"></image>
+            </view>
+        </view>
+    </view>
+</view>

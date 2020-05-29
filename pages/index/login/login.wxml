@@ -1,0 +1,30 @@
+<view>
+  <view class='mine_items'>
+    <view class='mine_item'>
+      <view class="pull-left">
+        账号
+      </view>
+      <view class="info_right pull-left">
+        <input bindinput="get_account" value="{{account}}" placeholder="请输入账号" />
+      </view>
+    </view>
+    <view class='mine_item'>
+      <view class="pull-left">
+        密码
+      </view>
+      <view class="pull-left">
+        <input bindinput="get_pass" value="{{pass}}" password="true" placeholder="请输入密码" />
+      </view>
+    </view>
+  </view>
+  <view class="submit_wrap">
+    <button class="submit" bindtap="submit">登录</button>
+  </view>
+  <view class="opers clearfix">
+    <navigator class="gray pull-left">验证码登录</navigator>
+    <navigator class="gray pull-right">忘记密码</navigator>
+  </view>
+  <view style="border-bottom: 1px solid #f2f2f2;position: relative;padding: 10px 0 0 0;">
+    <navigator class="register gray" url="../register/register" hover-class="none">注册</navigator>
+  </view>
+</view>

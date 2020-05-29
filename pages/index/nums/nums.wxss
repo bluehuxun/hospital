@@ -1,0 +1,18 @@
+.list>view{
+    border-bottom: 2rpx solid #f2f2f2;
+    padding: 0 30rpx;
+    line-height: 70rpx;
+    font-size:28rpx
+}
+.time{
+    color:#979797;
+}
+.border{
+    border:2rpx solid #1abb85;
+    color:#1abb85;
+    max-width:100rpx;
+    text-align:center;
+    height:50rpx;
+    line-height:50rpx;
+    border-radius: 6rpx;
+}

@@ -1,0 +1,93 @@
+<view class="list">
+    <view class='clearfix' wx:for="{{list}}">
+        <view class='clearfix'>
+            <image class="icon" mode="widthFix" src="{{img_url}}time.png"></image>
+            <view class='pull-left'>接种日期</view>
+            <view class='pull-right'>{{item.jzrq}}</view>
+             
+        </view>
+        <view class='clearfix'>
+            <view class='pull-left'>姓名</view>
+            <view class='pull-right'>{{item.xm}}</view>
+        </view>
+        
+        <view class='clearfix'>
+            <view class='pull-left'>出生日期</view>
+              <block wx:if="{{item.csrq == null}}">暂无</block>
+                <block wx:else>{{item.csrq}}</block>
+            
+        </view>
+        <view class='clearfix'>
+            <view class='pull-left'>受种者编号</view>
+          
+            <view class='pull-right'>{{item.szzbh}}</view>
+        </view>
+        
+        <view class='clearfix'>
+            <view class='pull-left'>居住地址</view>
+              <block wx:if="{{item.jzdz == null}}">暂无</block>
+                <block wx:else>{{item.jzdz}}</block>
+          
+        </view>
+        <view class='clearfix'>
+            <view class='pull-left'>建档医生</view>
+            <view class='pull-right'>
+                <block wx:if="{{item.yslxdh == null}}">暂无</block>
+                <block wx:else>{{item.jdys}}</block>
+            </view>
+        </view>
+        
+        <view class='clearfix'>
+            <view class='pull-left'>疫苗编码</view>
+              <block wx:if="{{item.ymbm == null}}">暂无</block>
+                <block wx:else>{{item.ymbm}}</block>
+       </view>
+          <view class='clearfix'>
+            <view class='pull-left'>疫苗名称</view>
+              <block wx:if="{{item.ymmc == null}}">暂无</block>
+                <block wx:else>{{item.ymmc}}</block>
+       </view>
+        <view class='clearfix'>
+            <view class='pull-left'>剂次</view>
+                <block wx:if="{{item.jc == null}}">暂无</block>
+                <block wx:else>{{item.jc}}</block>
+           
+        </view>
+        <view class='clearfix'>
+            <view class='pull-left'>批号</view>
+             <block wx:if="{{item.ph == null}}">暂无</block>
+            <block wx:else>{{item.ph}}</block>
+           
+        </view>
+        <view class='clearfix'>
+            <view class='pull-left'>疫苗生产企业编码</view>
+                <block wx:if="{{item.ymscqybm == null}}">暂无</block>
+            <block wx:else>{{item.ymscqybm}}</block>
+         
+        </view>
+        
+         <view class='clearfix'>
+            <view class='pull-left'>接种部位</view>
+            <view class='pull-right'>
+                <block wx:if="{{item.jzbw == null}}">暂无</block>
+                <block wx:else>{{item.jzbw}}</block>
+            </view>
+        </view>
+        
+        
+       
+    </view>
+</view>
+<view class="no_list_data" wx:if="{{list.length == 0}}">
+    <view class='toast-main'>
+                <view class='toast-input'>
+                    <input placeholder='请输入受种者编号' bindinput='setValue' data-name='szzbh'></input>
+                </view>
+            </view>
+            <view class='toast-button'>            
+                <view class='button'>
+                    <button catchtap='confirm' data-szzbh="{{item.szzbh}}" >确定</button>
+                </view>
+            </view>
+
+</view>

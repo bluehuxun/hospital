@@ -1,0 +1,8 @@
+<view class='hospital_name_wrap'>
+  <input class='hospital_name' placeholder='请输入医院名称'></input>
+</view>
+<view class='hospitals'>
+  <view data-text="{{index}}" wx:for="{{array}}" bindtap='get_con'>
+    {{item}}
+  </view>
+</view>

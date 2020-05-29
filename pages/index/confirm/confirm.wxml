@@ -1,0 +1,61 @@
+
+
+
+<view>
+    <view>
+        <view class="header">
+            <text wx:if="{{medino == ''}}">普通号</text>
+            <text wx:else>专家号</text>
+            <text class="doc gray">医生</text>
+        </view>
+        <view class="list">
+            <view class="flex">
+                <view>就诊科室</view>
+                <view>{{departname}}</view>
+            </view>
+            <view class="flex">
+                <view>门诊类型</view>
+                <view></view>
+            </view>
+            <view class="flex">
+                <view>就诊时间</view>
+                <view>
+                    <text>{{regdate}}</text>
+                    <text> {{regtime}}</text>
+                    <text wx:if="{{schtime == 1}}">上午</text>
+                    <text wx:else>下午</text>
+                </view>
+            </view>
+            <view class="flex">
+                <view>挂号费用</view>
+                <view></view>
+            </view>
+            <view class="flex">
+                <view>时段/序号</view>
+                <view>
+                    <text class="regdate">{{regdate}}</text>
+                    <text wx:if="{{regtime == 'undefined' || regtime == undefined}}">空_空</text>
+                    <text wx:else>{{regtime}}</text>
+                    /
+                    {{resno}}号
+                </view>
+            </view>
+
+            <view class="flex">
+                <view>就诊人</view>
+                <view>
+                    <picker bindchange="bindPickerChange" value="{{index}}"  range="{{list}}" range-key="patname">
+                        <view class="picker flex">
+                            {{list[index].patname}}
+                            <image class='nav pull-right' mode="widthFix" src='{{img_url}}subject_sel.png'></image>
+                        </view>
+                    </picker>
+                </view>
+            </view>
+        </view>
+    </view>
+    <view class="footer red">预约的号请以医院实际情况为准</view>
+</view>
+<view>
+    <button class="save" bindtap="confirm">确认</button>
+</view>

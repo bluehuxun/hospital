@@ -1,0 +1,50 @@
+<view class='header clearfix'>
+  <picker class='set_time' bindchange="set_time" value="{{times_index}}" range="{{times}}">
+    <view class="picker">
+      {{times[times_index]}}
+    </view>
+  </picker>
+  <image src='{{img_url}}triangle.png' mode='widthFix' class='triangle pull-right'></image>
+</view>
+<view>
+  <view class='report_item'>
+    <view class='title flex'>
+      <view class='title_left'>彩超肝、胆、脾，彩超双肾、输尿管</view>
+        <image src='{{img_url}}subject_sel.png' mode='widthFix' class='nav'></image>
+    </view>
+    <view class='report_info'>
+      <view>
+        <image src='{{img_url}}subject.png' mode='widthFix' class='exma_icon'></image>
+        超声科
+      </view>
+      <view>
+        <image src='{{img_url}}hospital_name.png' mode='widthFix' class='exma_icon'></image>
+      第一人民医院
+      </view>
+      <view>
+        <image src='{{img_url}}exam_time.png' mode='widthFix' class='exma_icon'></image>
+      2018-06-15
+      </view>        
+    </view>
+  </view>
+  <view class='report_item'>
+    <view class='title flex'>
+      <view class='title_left'>彩超肝、胆、脾，彩超双肾、输尿管</view>
+        <image src='{{img_url}}subject_sel.png' mode='widthFix' class='nav'></image>
+    </view>
+    <view class='report_info'>
+      <view>
+        <image src='{{img_url}}subject.png' mode='widthFix' class='exma_icon'></image>
+        超声科
+      </view>
+      <view>
+        <image src='{{img_url}}hospital_name.png' mode='widthFix' class='exma_icon'></image>
+      第一人民医院
+      </view>
+      <view>
+        <image src='{{img_url}}exam_time.png' mode='widthFix' class='exma_icon'></image>
+      2018-06-15
+      </view>        
+    </view>
+  </view>
+</view>

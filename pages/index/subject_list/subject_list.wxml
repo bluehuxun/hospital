@@ -1,0 +1,36 @@
+<view class='hospital_type text-center flex' style='display:none;'>
+  <view bindtap='change_hospital_type' data-hospital_type='0' class='{{hospital_type == "0" ? "active" : ""}}'>全部</view>
+  <view bindtap='change_hospital_type' data-hospital_type='1' class='{{hospital_type == "1" ? "active" : ""}}'>区医院</view>
+  <view bindtap='change_hospital_type' data-hospital_type='2' class='{{hospital_type == "2" ? "active" : ""}}'>乡镇医院</view>  
+</view>
+<view>
+  <view class='header clearfix'>
+    <view class='flex pull-left' style='flex:1;'>
+        <image class='hospital_img' src='{{img_url}}hospital_img.png'></image>
+        海盐县人民医院
+    </view>
+	<navigator url='../hospital_detail/hospital_detail' class='hospital_intro' size='mini'>医院介绍</navigator>
+  </view>
+</view>
+<view class='hospitals'>
+  <navigator url="../doctor_list/doctor_list">
+    <view class='hospitals_item clearfix'>
+      <view class='info_right pull-left'>
+        <view class='hospital_name'>神经内科</view>
+      </view>
+      <view class='flex pull-right'>
+        <image class='nav' mode="widthFix" src='{{img_url}}subject_sel.png'></image>
+      </view>
+    </view>
+   </navigator>
+   <navigator url="../doctor_list/doctor_list">
+    <view class='hospitals_item clearfix'>
+      <view class='info_right pull-left'>
+        <view class='hospital_name'>血液科</view>
+      </view>
+      <view class='flex pull-right'>
+        <image class='nav' mode="widthFix" src='{{img_url}}subject_sel.png'></image>
+      </view>
+    </view>
+   </navigator>
+</view>

@@ -1,0 +1,101 @@
+<view wx:if="{{idcard}}">
+    <view class='mine_items'>
+        <view class='mine_item flex'>
+            <view class='flex'>
+                姓名
+            </view>
+            <text>{{patname}}</text>
+        </view>
+        <view class='mine_item flex'>
+            <view class='flex'>
+                手机号
+            </view>
+            <text>{{phonecall}}</text>
+        </view>
+        <view class='id_card mine_item flex'>
+            <view class='flex'>
+                身份证号
+            </view>
+            <text>{{idcard}}</text>
+        </view>
+    </view>
+</view>
+<block wx:else>
+    <view class="no_list_data">
+        <view class="text-center">
+            <image src="{{img_url}}no_content.png" class="no_content"></image>
+        </view>
+        <view>您暂未绑定就诊人</view>
+    </view>
+</block>
+
+<!--<view>-->
+  <!--<view class='mine_items'>-->
+    <!--<view class='mine_item flex'>-->
+      <!--<view class='flex'>-->
+        <!--头像-->
+      <!--</view>-->
+        <!--<image src='{{img_url}}rect_avatar.jpg' class='avatar' mode='widthFix'></image>-->
+    <!--</view>-->
+    <!--<view class='mine_item flex'>-->
+      <!--<view class='flex'>-->
+        <!--姓名-->
+      <!--</view>-->
+      <!--<text>王琦</text>-->
+    <!--</view>-->
+    <!--<view class='mine_item flex'>-->
+      <!--<view class='flex'>-->
+        <!--性别-->
+      <!--</view>-->
+      <!--<text>男</text>-->
+    <!--</view>-->
+    <!--<view class='mine_item flex'>-->
+      <!--<view class='flex'>-->
+        <!--年龄-->
+      <!--</view>-->
+      <!--<text>26</text>-->
+    <!--</view>-->
+    <!--<view class='mine_item flex'>-->
+      <!--<view class='flex'>-->
+        <!--民族-->
+      <!--</view>-->
+      <!--<text>汉</text>-->
+    <!--</view>-->
+    <!--<view class='mine_item flex'>-->
+      <!--<view class='flex'>-->
+        <!--手机号-->
+      <!--</view>-->
+      <!--<text>12345678901</text>-->
+    <!--</view>-->
+    <!--<view class='id_card mine_item flex'>-->
+      <!--<view class='flex'>-->
+        <!--身份证号-->
+      <!--</view>-->
+      <!--<text>36023383838991291929</text>-->
+    <!--</view>-->
+    <!--<view class='mine_item flex'>-->
+      <!--<view class='flex'>-->
+        <!--市民卡号-->
+      <!--</view>-->
+      <!--<text>F123334</text>-->
+    <!--</view>-->
+    <!--<view class='mine_item flex'>-->
+      <!--<view class='flex'>-->
+        <!--家庭地址-->
+      <!--</view>-->
+      <!--<text>北京市海淀区</text>-->
+    <!--</view>-->
+    <!--<view class='mine_item flex'>-->
+      <!--<view class='flex'>-->
+        <!--既往病史-->
+      <!--</view>-->
+      <!--<text>慢性胃炎</text>-->
+    <!--</view>-->
+    <!--<view class='mine_item flex'>-->
+      <!--<view class='flex'>-->
+        <!--慢病史-->
+      <!--</view>-->
+      <!--<text>慢阻肺</text>-->
+    <!--</view>-->
+  <!--</view>-->
+<!--</view>-->

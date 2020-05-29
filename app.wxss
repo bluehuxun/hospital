@@ -1,0 +1,91 @@
+view{
+  box-sizing: border-box;
+  font-family: '微软雅黑';
+}
+.flex_center{
+    display: flex;
+    align-items: center;
+}
+button::after{
+  display: none;
+}
+.pull-left{
+  float:left;
+}
+.pull-right{
+  float:right;
+}
+.clearfix:after {
+   content:""; 
+   display: block; 
+   clear:both; 
+}
+.text-center{
+  text-align: center;
+}
+.flex{
+  display: flex;
+  flex-direction:row;
+  align-items : center;  
+}
+.flex>view{
+  flex:1;
+  align-items:center;
+}
+.no_content{
+  width:200rpx;
+  height:200rpx;
+}
+.nav{
+  width:20rpx;
+}
+.no_content_text{
+    color:#666;
+}
+.icon{
+  width:30rpx;
+}
+.submit_wrap{
+    padding: 10px;
+}
+.submit{
+    background: #1abb85;
+    color:#fff;
+}
+.gray{
+    color:#bbbfc5;
+}
+.green{
+    color:#1abb85;
+}
+.agree_con{
+    color:#1abb85;
+}
+.red{
+    color:#ff2828;
+}
+
+.no_list_data{
+    padding: 300rpx 0 0 0;
+    text-align: center;
+    color:#999;
+}
+.tip{
+    background: #fdedc9;
+    color:#71706d;
+    padding: 10rpx 0 10rpx 10rpx;
+    font-size:26rpx;
+    line-height: 44rpx;
+}
+.no_hos_data{
+    line-height:70rpx;
+    padding:0 0 0 20rpx;
+}
+.no_more_data{
+    text-align: center;
+}
+
+.over_auto{
+    overflow: auto;
+    -webkit-overflow-scrolling: touch;
+}

@@ -1,0 +1,189 @@
+<navigator style='display:none;' url='../sel_hospital/sel_hospital' class='sel_hospital flex'>
+  <!-- <view class='flex'> -->
+  <!-- <picker class='hospitals' value="{{hospital_index}}" range="{{hospitals}}" bindchange="sel_hospital"> -->
+  <!-- <view class='sel_hospital_img pull-left'> -->
+  <image src='{{img_url}}more.png' mode='widthFix' class='more'></image>
+  <!-- </view> -->
+  <view class="picker pull-left">{{hospitals[hospital_index]}}</view>
+  <!-- </picker> -->
+  <!-- </view> -->
+  <input style='display:none;' type='text' class='search_hospital' placeholder='请输入医院关键词'></input>
+</navigator>
+<view class='sel_hospital_wrap'>
+  <swiper style='height:{{swiper_h}}px;' indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}" indicator-dots='true' circular='true'>
+    <block wx:for="{{imgUrls}}">
+      <swiper-item>
+        <image bindload="imageLoad" src="{{item}}" class="slide-image" mode='widthFix' />
+      </swiper-item>
+    </block>
+  </swiper>
+</view>
+<!-- <view class="header">
+  <view class="flex">
+    <view class="flex" bindtap="to_hos">
+      <image src="{{img_url}}appoint_register.png" mode="widthFix"></image>
+      <view class="desc">
+        <view>预约挂号</view>
+        <view class="sub_desc">在线快速挂号</view>
+      </view>
+    </view>
+    <view class="flex" bindtap="to_report_search">
+      <image src="{{img_url}}report_search.png" mode="widthFix"></image>
+      <view class="desc">
+        <view>报告查询</view>
+        <view class="sub_desc">线上一键查询</view>
+      </view>
+    </view>
+  </view>
+  <view class="flex">
+    <view class="flex" bindtap="to_body_exam_report">
+      <image src="{{img_url}}outpatient_service.png?1" mode="widthFix"></image>
+      <view class="desc">
+        <view>体检报告</view>
+        <view class="sub_desc">一键知晓结果</view>
+      </view>
+    </view>
+    <view class="flex" bindtap='to_heath_file'>
+      <image src="{{img_url}}health_file.png?1" mode="widthFix"></image>
+      <view class="desc">
+        <view>健康档案</view>
+        <view class="sub_desc">综合全面浏览</view>
+      </view>
+    </view>
+  </view>
+</view> -->
+<!-- <view class="flex" bindtap='no_online'> -->
+<!-- 丁哥设计图 -->
+<view class="header">
+  <view class="marginB flexrow">
+    <view bindtap="to_hos">
+      <image class="yygh" src="../../../img/yuyueguahao.png"></image>
+    </view>
+    <view class="flexcolumn">
+      <view class="marginB" bindtap="to_report_search">
+        <image class="bgcx" src="../../../img/baogaochaxun.png"></image>
+      </view>
+      <view bindtap='to_heath_file'>
+        <image class="jkbg" src="../../../img/jiankangdangan.png"></image>
+      </view>
+    </view>
+  </view>
+  <view class="flexrow">
+    <view class="marginR" bindtap="to_body_exam_report">
+      <image class="tjbg" src="../../../img/tijianbaogao.png"></image>
+    </view>
+    <view bindtap="to_body_physical_fill">
+      <image class="latj" src="../../../img/liangaitijian.png"></image>
+    </view>
+  </view>
+</view>
+<view class='services'>
+  <view class='services_header'>
+    <text class='services_header_text'>更多功能</text>
+  </view>
+  <view class='flex'>
+    <view class='text-center'>
+      <navigator url="../hospital_list/hospital_list?to=hospital_nav">
+        <view>
+          <image class='service_img' src='{{img_url}}hos_nav.png?1' mode='widthFix'></image>
+        </view>
+        <view>医院导航</view>
+      </navigator>
+    </view>
+    <!-- <view class='text-center'> -->
+    <!-- <navigator url="../sel_patient2/sel_patient2?to=test_report"> -->
+    <!-- <view> -->
+    <!-- <image class='service_img' src='{{img_url}}outpatient_service.png?1' mode='widthFix'></image> -->
+    <!-- </view> -->
+    <!-- <view>报告查询</view> -->
+    <!-- </navigator> -->
+    <!-- </view> -->
+    <view class='text-center' bindtap="to_sign_manage">
+      <!-- <navigator url="../sel_patient/sel_patient?to=contract_manage"> -->
+      <view url="../sel_patient/sel_patient?to=contract_manage">
+        <view>
+          <image class='service_img' src='{{img_url}}sign_manage.png?1' mode='widthFix'></image>
+        </view>
+        <view>签约管理</view>
+      </view>
+      <!-- </navigator> -->
+    </view>
+    <view class='text-center'>
+      <view bindtap='to_jm_manage' url="../sel_patient3/sel_patient3?to=jm_manage">
+        <view>
+          <image class='service_img' src='{{img_url}}health_file.png?1' mode='widthFix'></image>
+        </view>
+        <view>计免</view>
+      </view>
+    </view>
+    <view class='text-center'>
+      <view bindtap='to_appoint_lead'>
+        <view>
+          <image class='service_img' src='{{img_url}}use_desc.png?13' mode='widthFix'></image>
+        </view>
+        <view>操作说明</view>
+      </view>
+    </view>
+    <!-- <view class='text-center'> -->
+    <!-- <navigator url="../sel_patient2/sel_patient2?to=body_exam_report"> -->
+    <!-- <view> -->
+    <!-- <image class='service_img' src='{{img_url}}heath_manage.png?1' mode='widthFix'></image> -->
+    <!-- </view> -->
+    <!-- <view>体检报告</view> -->
+    <!-- </navigator> -->
+    <!-- </view> -->
+    <view class='text-center' bindtap='to_more_serve'>
+      <view>
+        <image class='service_img' src='{{img_url}}more_service.png?1' mode='widthFix'></image>
+      </view>
+      <view>就诊记录</view>
+    </view>
+  </view>
+  <view class='flex' hidden="true">
+    <!-- <view class='text-center'> -->
+    <!-- <navigator url="../hospitals/hospitals?to=subject"> -->
+    <!-- <view> -->
+    <!-- <image class='service_img' src='{{img_url}}appoint_register.png?1' mode='widthFix'></image> -->
+    <!-- </view> -->
+    <!-- <view>预约挂号</view> -->
+    <!-- </navigator> -->
+    <!-- </view> -->
+    <view class='text-center'>
+      <view bindtap='no_online' url="../sel_patient/sel_patient?to=health_file">
+        <view>
+          <image class='service_img' src='{{img_url}}health_file.png?1' mode='widthFix'></image>
+        </view>
+        <view>健康档案</view>
+      </view>
+    </view>
+    <!-- <view class='text-center' bindtap='no_online'> -->
+    <!-- <view> -->
+    <!-- <image class='service_img' src='{{img_url}}health_file.png?1' mode='widthFix'></image> -->
+    <!-- </view> -->
+    <!-- <view> -->
+    <!-- 健康资讯 -->
+    <!-- </view> -->
+    <!-- </view> -->
+  </view>
+</view>
+<view>
+  <view class="news flex">
+    <view class="flex_center">
+      <image src="{{img_url}}recent.png?1" class="recent" mode="widthFix"></image>
+      <text class="news_title">健康教育资讯</text>
+    </view>
+    <view class="to_more_news pull-right" bindtap="to_more_news">更多 ></view>
+  </view>
+  <view class="news_list">
+    <!-- data-url="../news/news?url=" -->
+    <navigator bindtap="get_detail" class="news_item flex" data-url="{{news_list_item.url}}" wx:for="{{news_list}}" wx:for-item="news_list_item">
+      <view>
+        <image class="recent_img" src="{{news_list_item.image}}"></image>
+      </view>
+      <view class="list_right">
+        <view class="title">{{news_list_item.zxname}}</view>
+        <view class="gray small">{{news_list_item.addtime}}</view>
+      </view>
+    </navigator>
+  </view>
+</view>
